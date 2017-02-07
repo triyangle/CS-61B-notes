@@ -1,3 +1,2 @@
-# My Awesome Book
-
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+# CS 61B Notes
+UC Berkeley CS 61B Spring 2017 Notes
