@@ -9,7 +9,7 @@
         * [ALists, Resizing, vs SLists](lecture/week3/lec6.md)
         * [Testing](lecture/week3/lec7.md)
         * [Inheritance, Implements](lecture/week3/lec8.md)
-    * [Week 4]
+    * [Week 4]()
 
 * [Projects]()
     * [NBody]()
