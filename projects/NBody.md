@@ -6,7 +6,7 @@ public Dog(String name, String breed1, String breed2, int age) {
 }
 ```
 
-<center>is equivalent to</center>
+is equivalent to
 
 ```java
 public Dog(String name, String breed1, String breed2, int age) {
@@ -16,7 +16,7 @@ public Dog(String name, String breed1, String breed2, int age) {
 }
 ```
 
-<center>where `Dog` is</center>
+where `Dog` is
 
 ```java
 public class Dog {
