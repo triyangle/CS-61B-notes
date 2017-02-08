@@ -13,6 +13,6 @@
         * [Extends, Casting, Higher Order Functions](lecture/week4/lec9.md)
 
 * [Projects]()
-    * [NBody](projets/NBody.md)
+    * [NBody](projects/NBody.md)
 
 * [Reading]()
