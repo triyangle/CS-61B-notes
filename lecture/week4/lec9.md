@@ -70,6 +70,7 @@ public static void main(String[] args) {
 
     s1.printLostItems(); // compilation error!
     VengefulSLList<Integer> vsl2 = s1; // compilation error!
+}
 ```
 
 * Compiler only allows method calls & assignments based strictly on compile-time types
