@@ -10,8 +10,9 @@
         * [Testing](lecture/week3/lec7.md)
         * [Inheritance, Implements](lecture/week3/lec8.md)
     * [Week 4]()
+        * [Extends, Casting, Higher Order Functions](lecture/week4/lec9.md)
 
 * [Projects]()
-    * [NBody]()
+    * [NBody](projets/NBody.md)
 
 * [Reading]()

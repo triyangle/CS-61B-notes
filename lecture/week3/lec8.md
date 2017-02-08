@@ -51,11 +51,11 @@ public static void main(String[] args) {
 }
 ```
 
-Variable | Static Type | Dynamic Type
---- | --- | ---
-`lt1` | `LivingThing` | `Squid`
-`a1` | `Animal` | `Fox`
-`h1` | `Fox` | `Fox`
+Variable | Static Type   | Dynamic Type |
+---------|---------------|--------------|
+`lt1`    | `LivingThing` | `Squid`      |
+`a1`     | `Animal`      | `Fox`        |
+`h1`     | `Fox`         | `Fox`        |
 
 * When calling method of object using variable with:
     * Compile-time type `X`
