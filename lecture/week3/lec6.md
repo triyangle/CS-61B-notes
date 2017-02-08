@@ -1,4 +1,4 @@
-# 1/30/17 - ALists, Resizing, vs SLists
+# ALists, Resizing, vs SLists
 
 ## Why Array Lists
 

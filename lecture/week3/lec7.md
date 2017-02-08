@@ -1,4 +1,4 @@
-# 2/1/17 - Testing
+# Testing
 * `org.junit.Assert.assertEquals(expected, input)`, deprecated
 * `org.junit.Assert.assertArrayEquals(expected, input)`
 

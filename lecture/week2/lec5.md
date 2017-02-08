@@ -1,4 +1,4 @@
-# 1/27/17 - DLLists, Arrays
+# DLLists, Arrays
 
 ## Doubly Linked Lists
 * `add`, `get`, `remove` fast for both ends, O(1) time

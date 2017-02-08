@@ -1,4 +1,4 @@
-# 1/23/17 - References, Recursion, & Lists
+# References, Recursion, & Lists
 
 ## Primitive Types
 ### Bits

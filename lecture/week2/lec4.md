@@ -1,4 +1,4 @@
-# 1/25/17 - SLLists, Nested Classes, Sentinel Nodes
+# SLLists, Nested Classes, Sentinel Nodes
 
 ## Introducing the SLList
 * IntList = "naked" recursive data structure

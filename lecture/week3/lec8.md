@@ -1,4 +1,4 @@
-# 2/3/17 - Inheritance, Implements
+# Inheritance, Implements
 
 ## Hypernyms, Hyponyms, & Interface Inheritance
 * Define reference type (`interface`) for hypernym (`List61B.java`)
