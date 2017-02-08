@@ -106,6 +106,7 @@ public static void main(String[] args) {
         * Compile-time type `Dog`: `maxDog(frank, frankJr);`
         * Compile-time type `Poodle`: `(Poodle) maxDog(frank, frankJr);`
 * Way to trick compiler, can run into trouble tho
+
 ```java
 Poodle frank = new Poodle("Frank", 5);
 Poodle frankJr = new Poodle("Frank Jr.", 15);
@@ -117,6 +118,7 @@ Poodle largerPoodle = (Poodle) maxDog(frank, frankJr); // Compilation OK, RHS ha
 * Casting = powerful but dangerous tool, use sparingly
     * Tells Java to treat expression as having different compile-time type
     * Effectively tells compiler to ignore type checking duties
+
 ```java
 Poodle frank = new Poodle("Frank", 5);
 Malamute frankJr = new Malamute("Frank Jr.", 100);
