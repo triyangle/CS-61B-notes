@@ -62,7 +62,7 @@
 
 ```java
 public static void main(String[] args) {
-    VengefulSLList<Integer> vs1 = new VengefulSLList<Integer>(9);
+    VengefulSLList<Integer> vs1 = new VengefulSLList<Integer>();
     SLList<Integer> s1 = vs1;
 
     s1.addLast(50);
