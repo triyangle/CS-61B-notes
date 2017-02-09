@@ -12,6 +12,9 @@
     * [Week 4]()
         * [Extends, Casting, Higher Order Functions](lecture/week4/lec9.md)
 
+* [Tests]()
+    * [Midterm 1](midterm/mt1.md)
+
 * [Projects]()
     * [NBody](projects/NBody.md)
 
