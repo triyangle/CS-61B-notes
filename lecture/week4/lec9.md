@@ -146,5 +146,5 @@ Poodle largerPoodle = (Poodle) maxDog(frank, frankJr); // Compilation OK, errors
     * Use `super` to invoke overridden superclass methods & constructors
 * Invocation of overridden methods follows 2 simple rules:
     * Compiler plays it safe & only lets us do things allowed by ***static*** type
-    * For overridden methods, actual method invoked based on ***dynamic*** type (does not apply to **overloaded** methods) of invoking expression, e.g. `Dog.maxDog(d1, d2).dark();`
+    * For overridden methods, actual method invoked based on ***dynamic*** type (does not apply to **overloaded** methods) of invoking expression, e.g. `Dog.maxDog(d1, d2).bark();`
     * Can use casting to overrule compiler type checking
