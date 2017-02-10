@@ -20,3 +20,5 @@
     * [NBody](projects/NBody.md)
 
 * [Reading]()
+    1. [Lists]()
+        1. [Mystery of the Walrus](reading/Ch2/1.md)
