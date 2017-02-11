@@ -1,6 +1,6 @@
 # Midterm 1 Notes
 
-## `AList`
+## AList
 * Usage ratio `R = size / items.length`
     * Halve size of array when `R < .25`
 
