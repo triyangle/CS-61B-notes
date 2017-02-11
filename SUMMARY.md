@@ -23,5 +23,5 @@
     * [2. Lists]()
         * [2.1 Mystery of the Walrus](reading/Ch2/1/1.md)
         * [2.2 The SLList](reading/Ch2/2/2.md)
-        * [2.4 Arrays](readings/Ch2/4/4.md)
+        * [2.4 Arrays](reading/Ch2/4/4.md)
         * [2.5 The AList](reading/Ch2/5/5.md)
