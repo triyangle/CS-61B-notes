@@ -14,7 +14,7 @@
         * [Subtype Polymorphism vs HoFs](lecture/week04/lec10.md)
 
 * [Tests]()
-    * [Midterm 1](midterm/mt1.md)
+    * [Midterm 1](review/mt1.md)
 
 * [Projects]()
     * [NBody](projects/NBody.md)

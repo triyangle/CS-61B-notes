@@ -33,6 +33,9 @@
 * Declaring nested class as `static` → methods inside static nested class cannot access instance members of enclosing class
 
 ## Java Syntax
+
+* Can change/access static variables in constructor/instance methods
+
 ### Arrays
 ```java
 int[] x;
