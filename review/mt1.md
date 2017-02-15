@@ -37,6 +37,7 @@
 * Method signature to be called determined at compile-time → first matches w/ method of static type with corresponding matching static type parameters
     * If run-time type is subclass & overrides currently matched superclass method → calls subclass's method that overrides
 * > When a method is invoked (§15.12), the number of actual arguments (and any explicit type arguments) and the compile-time types of the arguments are used, at compile time, to determine the signature of the method that will be invoked (§15.12.2). If the method that is to be invoked is an instance method, the actual method to be invoked will be determined at run time, using dynamic method lookup (§15.12.4).
+
     * Overloading resolution performed at compile time, using static types
 
 ## Overriding
