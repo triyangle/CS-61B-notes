@@ -36,6 +36,8 @@
     * Passing args to overloaded methods matches static argument type w/ parameter type (doesn't look at dynamic type), also affected by casting
 * Method signature to be called determined at compile-time → first matches w/ method of static type with corresponding matching static type parameters
     * If run-time type is subclass & overrides currently matched superclass method → calls subclass's method that overrides
+* > When a method is invoked (§15.12), the number of actual arguments (and any explicit type arguments) and the compile-time types of the arguments are used, at compile time, to determine the signature of the method that will be invoked (§15.12.2). If the method that is to be invoked is an instance method, the actual method to be invoked will be determined at run time, using dynamic method lookup (§15.12.4).
+    * Overloading resolution performed at compile time, using static types
 
 ## Overriding
 * Access specifier for overriding method can allow more, but not less, access than overridden method
@@ -81,6 +83,8 @@
 
 ## Inheritance
 * `super.super` not allowed
+* Default no-arg superclass constructor always called as first statement of subclass constructor
+    * If superclass doesn't have no-arg constructor (e.g. defines constructor w/ parameters, doesn't define no-param constructor) → will error when creating subclass object
 
 ## Polymorphism
 * Methods can return subclasses of their declared type & take in arguments that are subclasses of declared parameter types
@@ -100,3 +104,8 @@ y = new int[] {1, 2, 3, 4, 5};
 int[] z = {9, 10, 11, 12, 13}; // can only be used when combined w/ variable declaration
 ```
 * `System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)`
+
+
+## Strings
+* `String` = immutable reference type
+    * Performing operation (e.g. concatenation) → creates new `String`
