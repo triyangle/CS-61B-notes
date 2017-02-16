@@ -75,7 +75,7 @@
 
 ## Packages
 ### Canonicalization
-* Want ability to provide canonical name for everythin
+* Want ability to provide canonical name for everything
     * ***Canonical representation:*** Unique representation for thing
     * Non-canonical: license plate # (can be reused, can change)
     * Canonical: VIN number refers to specific car/motorcycle

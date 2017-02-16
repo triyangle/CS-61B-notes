@@ -18,6 +18,7 @@
 
 * [Tests]()
     * [Midterm 1](review/mt1.md)
+    * [Midterm 2](review/mt2.md)
 
 * [Projects]()
     * [NBody](projects/NBody.md)
