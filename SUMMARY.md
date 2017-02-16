@@ -14,7 +14,7 @@
         * [Subtype Polymorphism vs HoFs](lecture/week04/lec10.md)
         * [Libraries, Abstract Classes, Packages](lecture/week04/lec11/lec11.md)
     * [Week 5]()
-        * [Generics, Autoboxing]()
+        * [Generics, Autoboxing](lecture/week05/lec13.md)
 
 * [Tests]()
     * [Midterm 1](review/mt1.md)
