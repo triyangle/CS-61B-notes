@@ -15,6 +15,11 @@
         * [Libraries, Abstract Classes, Packages](lecture/week04/lec11/lec11.md)
     * [Week 5]()
         * [Generics, Autoboxing](lecture/week05/lec13.md)
+        * [Exceptions, Iterators, Iterables](lecture/week05/lec14/lec14.md)
+    * [Week 6]()
+        * [Exceptions, Access Control, Objects]()
+        * [Encapsulation, Lists, Delegation vs Extension]()
+    * [Week 7]()
 
 * [Tests]()
     * [Midterm 1](review/mt1.md)
