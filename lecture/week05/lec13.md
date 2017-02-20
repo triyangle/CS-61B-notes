@@ -30,7 +30,6 @@
     * Neither necessary nor sufficient for immutability
     * Can assign value only once (in constructor of class or initializer)
     * Not necessary to have `final` to be immutable (e.g. private variables)
-
 * Advantage: less to think about, avoids bugs & makes debugging easier, constrains set of things to worry about
 * Disadvantage: must create new object anytime anything changes
 * Declaring reference **`final`** does not make object referred to by reference immutable
