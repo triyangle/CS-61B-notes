@@ -52,3 +52,39 @@
 * Instantiate non-static nested class (inner class) → use `instance.new`
 * Implement `Iterable` interface to support enhanced for loop
     * `iterator()` method must return object that implements `Iterator` interface
+
+## Packages
+* Cannot import/use/access code from default package from within different package
+
+## Access Control
+* Access based **only** on static types
+
+### Access Control w/ Inheritance & Packages
+* ***`protected`*** modifier allows package members & subclasses to use class member
+* Package private: no modifier → allows classes from same package, _but not subclasses_ to access member
+
+#### Access Levels
+| Modifier      | Class | Package | Subclass | World |
+|:-------------:|:-----:|:-------:|:--------:|:-----:|
+| `public`      | Y     | Y       | Y        | Y     |
+| `protected`   | Y     | Y       | Y        | N     |
+| _no modifier_ | Y     | Y       | N        | N     |
+| `private`     | Y     | N       | N        | N     |
+
+
+### Access Control at the Top Level
+* Two levels: `public`, no modifier (package-private)
+    * Can't declare top level class as `private`/`protected`
+* No such thing as a sub-package, `ug.joshh.Animal` & `ug.joshh.Plant` = 2 completely different packages
+
+
+## `.equals()`
+* Default implementation of `.equals()` uses `==`
+* JUnit `assertEquals` uses `.equals()`
+* `.equals()` parameter must take `Object`, cast to actual type w/in `.equals()` method
+* Generally will need:
+    * Reference check
+    * `null` check
+    * Class check w/ `.getClass()`
+    * Cast to same type
+    * Check fields
