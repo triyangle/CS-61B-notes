@@ -52,7 +52,7 @@
         * [Reductions, Algorithmic Bounds, NP Completeness]()
         <!--- * [Summary, Fun]() -->
 
-* [Tests]()
+* [Exams]()
     * [Midterm 1](review/mt1.md)
     * [Midterm 2](review/mt2.md)
 
