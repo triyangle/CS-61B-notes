@@ -23,10 +23,12 @@ $$
 R(N) \in O(f(N)) \implies \exists\ \ k > 0 \ |\ R(N) \leq k \cdot f(N)
 $$
 
-## Summary
+{% math %}\int_{-\infty}^\infty g(x) dx{% endblock %}
+<!--- ## Summary
 | Category                                   | Informal Meaning                                                  | Family                              | Family Members                                                                                           |
 |:------------------------------------------:|:-----------------------------------------------------------------:|:-----------------------------------:|:--------------------------------------------------------------------------------------------------------:|
 | Big 𝚯 {% math %}\Theta(f(N)){% endblock %} | {% math %}R(N) \propto f(N){% endblock %}                         | {% math %}\Theta(N^2){% endblock %} | {% math %}\frac{N^2}{2}{% endblock %} {% math %}2N^2{% endblock %} {% math %}N^2 + 38N + N{% endblock %} |
 | Big O {% math %}O(f(N)){% endblock %}      | {% math %}R(N) \leq f(N){% endblock %}                            | {% math %}O(N^2){% endblock %}      | {% math %}\frac{N^2}{2}{% endblock %} {% math %}2N^2{% endblock %} {% math %}\log(N){% endblock %}       |
 | Big 𝛀 {% math %}\Omega(f(N)){% endblock %} | {% math %}R(N) \geq f(N){% endblock %}                            | {% math %}\Omega(N^2){% endblock %} | {% math %}\frac{N^2}{2}{% endblock %} {% math %}2N^2{% endblock %} {% math %}e^N{% endblock %}           |
 | Tilde {% math %}\sim f(N){% endblock %}    | {% math %}\lim_{n \to \infty} \frac{R(N)}{f(N)} = 1{% endblock %} | {% math %}\sim 2N^2{% endblock %}   | {% math %}2N^2{% endblock %} {% math %}2N^2 + 5{% endblock %}                                            |
+-->
