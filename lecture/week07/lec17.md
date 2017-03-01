@@ -3,3 +3,4 @@
 * Big O: Bounding above (less than)
 * Big 𝛀: Bounding below (greater than)
 * **Big 𝚯:** Bounding above & below (equals)
+* Pick some representative operation → _**cost model**_
