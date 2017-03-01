@@ -21,6 +21,9 @@ $$
 $$
 R(N) \in O(f(N)) \implies \exists\ \ k > 0 \ |\ R(N) \leq k \cdot f(N)
 $$
+$$
+\forall\ N > N_0
+$$
 
 ## Summary
 | Category                   | Informal Meaning                              | Family          | Family Members                                       |
