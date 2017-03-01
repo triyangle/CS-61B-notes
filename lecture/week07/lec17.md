@@ -6,14 +6,14 @@
 * Pick some representative operation → _**cost model**_
 
 ## Big 𝚯
-* Performance measurement $R(N)$, $N = \text{size of problem}$
+* Performance measurement $$R(N)$$, $$N = \text{size of problem}$$
 
 $$R(N) \in \Theta(f(N)) \implies \exists\ \ k_1,\ k_2 > 0 \ |\ k_1 \cdot f(N) \leq R(N) \leq k_2 \cdot f(N)$$
 $$\forall\ N > N_0$$
 
 ## Big O
 * Only bounds from above
-* Order of growth of $R(N) \leq f(N)$
+* Order of growth of $$R(N) \leq f(N)$$
 
 $$R(N) \in O(f(N)) \implies \exists\ \ k > 0 \ |\ R(N) \leq k \cdot f(N)$$
 
