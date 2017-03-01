@@ -16,8 +16,7 @@ $$\forall\ N > N_0$$
 * Order of growth of $$R(N) \leq f(N)$$
 
 $$R(N) \in O(f(N)) \implies \exists\ \ k > 0 \ |\ R(N) \leq k \cdot f(N)$$
-{% math %}\int_{-\infty}^\infty g(x) dx{% endblock %}
-
+When {% math %}a \ne 0{% endmath %}, there are two solutions to {% math %}(ax^2 + bx + c = 0){% endmath %} and they are {% math %}x = {-b \pm \sqrt{b^2-4ac} \over 2a}.{% endmath %}
 ## Summary
 | Category               | Informal Meaning                              | Family          | Family Members                               |
 |:----------------------:|:---------------------------------------------:|:---------------:|:--------------------------------------------:|
