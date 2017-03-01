@@ -1,3 +1,7 @@
 # Asymptotics I
-* Pick some representative operation → ***cost model***
+
+* Pick some representative operation → _**cost model**_
 * $$\frac{3}{3}$$
+
+
+
