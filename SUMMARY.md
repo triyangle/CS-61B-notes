@@ -23,7 +23,7 @@
   * Week 7
     * [Asymptotics I](lecture/week07/lec17.md)
     * Asymptotics II
-    * [Asymptotics III](lecture/week07/asymptotics-iii.md)
+    * [Asymptotics III]()
   * Week 8
     * Disjoint Sets
     * Trees, BSTs
