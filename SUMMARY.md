@@ -22,7 +22,7 @@
     * [Encapsulation, Lists, Delegation vs Extension](lecture/week06/lec16.md)
   * Week 7
     * [Asymptotics I](lecture/week07/lec17.md)
-    * [Asymptotics II](lecture/week07/lec18.md)
+    * [Asymptotics II](lecture/week07/lec18/lec18.md)
     * [Asymptotics III]()
   * Week 8
     * Disjoint Sets
