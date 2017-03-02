@@ -22,7 +22,7 @@
     * [Encapsulation, Lists, Delegation vs Extension](lecture/week06/lec16.md)
   * Week 7
     * [Asymptotics I](lecture/week07/lec17.md)
-    * Asymptotics II
+    * [Asymptotics II](lecture/week07/lec18.md)
     * [Asymptotics III]()
   * Week 8
     * Disjoint Sets
@@ -66,4 +66,3 @@
   * [Algorithms, 4th Edition](http://algs4.cs.princeton.edu/home/)
     * [1. Fundamentals](http://algs4.cs.princeton.edu/10fundamentals/)
       * 1.4 Analysis of Algorithms
-
