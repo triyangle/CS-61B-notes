@@ -24,5 +24,5 @@
 ## Empirical Analysis
 ### Tilde Notation
 $$
-f(n) \sim g(n) \iff \lim_{n \to \infty} \frac{f(N)}{g(N)} = 1
+f(n) \sim g(n) \iff \lim_{n \to \infty} \frac{f(n)}{g(n)} = 1
 $$
