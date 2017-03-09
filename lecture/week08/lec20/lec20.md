@@ -25,9 +25,10 @@
 
 ## Performance Summary
 | Implementation | Constructor   | `connect`      | `isConnected`  |
-|----------------|---------------|----------------|----------------|
+|:--------------:|:-------------:|:--------------:|:--------------:|
+| `QuickFindDS` | $$\Theta(N)$$ | $$\Theta(N)$$       | $$\Theta(1)$$       |
 | `QuickUnionDS` | $$\Theta(N)$$ | $$O(N)$$       | $$O(N)$$       |
-| `QuickUnionDS` | $$\Theta(N)$$ | $$O(\log{N})$$ | $$O(\log{N})$$ |
+| `WeightedQuickUnionDS` | $$\Theta(N)$$ | $$O(\log{N})$$ | $$O(\log{N})$$ |
 
 ## Path Compression
 * When doing `isConnected(15, 10)`, tie all nodes seen to the root
@@ -38,3 +39,11 @@
 * [$$\log^{*}{n} = \text{iterated/super logarithm}$$](https://en.wikipedia.org/wiki/Iterated_logarithm)
     * Inverse of [super exponentiation](https://en.wikipedia.org/wiki/Tetration)
 * Tighter bound: $$O(N + M \alpha(N))$$, where $$\alpha$$ is the inverse [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function)
+
+<center>
+![weighted](weighted.png)
+
+![dynamic](dynamic.png)
+
+![nazca](nazca.png)
+</center>
