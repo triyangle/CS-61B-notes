@@ -26,7 +26,7 @@
     * [Asymptotics III](lecture/week07/lec19/lec19.md)
   * Week 8
     * [Disjoint Sets](lecture/week08/lec20/lec20.md)
-    * Trees, BSTs
+    * [Trees, BSTs](lecture/week08/lec21.md)
     * Balanced BSTs
   * Week 9
     * Hashing
