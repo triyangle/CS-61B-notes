@@ -5,6 +5,7 @@
 * $$\lfloor f(N) \rfloor \in \Theta(f(N))$$
 
 ## Merge Sort
+<p align="center">
 ![Merge sort motivations](merge_motivation.png)
-
 ![Merge](merge.png)
+</p>
