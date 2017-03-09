@@ -1,7 +1,7 @@
 # Asymptotics III
 ## ArrayList
 <p algin="center">
-![ArrayList](ArrayList.png)
+    <img src="ArrayList.png">
 </p>
 * ArrayList has average time that grows very slowly → converges to constant
 * Given N items, cost of insert:
