@@ -13,7 +13,7 @@
 * Modify quick-union to avoid tall trees
     * Track tree size (**number** of elements), also works similarly for height
     * Always link root of ***smaller*** tree ***to larger*** tree
-* Max depth of any item $$\log{N}$$
+* Max depth of any item is $$\log{N}$$
     * Depth of element `x` only increases when tree `T1` that contains `x` linked below other tree `T2`
         * Occurs only when `weight(T2) >= weight(T1)`
         * Size of resulting tree is at least doubled
