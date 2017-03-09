@@ -40,10 +40,6 @@
     * Inverse of [super exponentiation](https://en.wikipedia.org/wiki/Tetration)
 * Tighter bound: $$O(N + M \alpha(N))$$, where $$\alpha$$ is the inverse [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function)
 
-<center>
 ![weighted](weighted.png)
-
 ![dynamic](dynamic.png)
-
 ![nazca](nazca.png)
-</center>
