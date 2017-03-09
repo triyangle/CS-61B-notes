@@ -42,6 +42,8 @@
 
 <p align="center">
     <img src="weighted.png">
+    <br>
     <img src="dynamic.png">
+    <br>
     <img src="nazca.png">
 </p>
