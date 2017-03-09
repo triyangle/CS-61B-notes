@@ -13,7 +13,7 @@
 * Checked exceptions = part of **specification** of class
 
 <p align="center">
-![Exceptions inheritance map](exceptions.png)
+    <img src="exceptions.png">
 </p>
 
 ### Checking Exceptions

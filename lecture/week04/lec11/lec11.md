@@ -20,7 +20,7 @@
 * Maps also known as associative arrays, associative lists (Lisp), symbol tables, dictionaries (Python)
 
 <p align="center">
-![ADT inheritance map](adt.png)
+    <img src="adt.png">
 </p>
 
 
