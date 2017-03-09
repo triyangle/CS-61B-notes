@@ -41,7 +41,11 @@
 * Tighter bound: $$O(N + M \alpha(N))$$, where $$\alpha$$ is the inverse [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function)
 
 <p align="center">
+
 ![weighted](weighted.png)
+
 ![dynamic](dynamic.png)
+
 ![nazca](nazca.png)
+
 </p>

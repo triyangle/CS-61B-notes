@@ -12,7 +12,9 @@
 * All other `Throwable`s are _checked_
 * Checked exceptions = part of **specification** of class
 
+<p align="center">
 ![Exceptions inheritance map](exceptions.png)
+</p>
 
 ### Checking Exceptions
 * **Specify** method as dangerous w/ ***`throws`*** keyword
