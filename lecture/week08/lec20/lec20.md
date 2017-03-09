@@ -42,10 +42,8 @@
 
 <p align="center">
 
-![weighted](weighted.png)
-
-![dynamic](dynamic.png)
-
-![nazca](nazca.png)
+<img src="weighted.png">
+<img src="dynamic.png">
+<img src="nazca.png">
 
 </p>
