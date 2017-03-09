@@ -45,7 +45,9 @@
 * Any subclass of **`RuntimeException`** or **`Error`** is _unchecked_
 * All other `Throwable`s are _checked_
 
-![Exceptions inheritance map](../lecture/week05/lec14/exceptions.png)
+<p align="center">
+    <img src="../lecture/week05/lec14/exceptions.png">
+</p>
 
 
 ## Iteration
