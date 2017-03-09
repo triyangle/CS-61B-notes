@@ -34,6 +34,7 @@
     * Additional cost insignificant (same order of growth)
 * Kinda memoization/dynamic programming?
 * Path compression results in union/connected operations very close to amortized constant time
-* $$M$$ operations on $$N$$ nodes = $$O(N + M \log_{2}^{*}{N})$$
-
-$f(x) = \begin{cases}1 & -1 \le x < 0 \\ \frac{1}{2} & x = 0 \\ 1 - x^2 & \text{otherwise} \end{cases}$
+* $$M$$ operations on $$N$$ nodes = $$O(N + M \lg^{*}{N})$$
+* [$$\log^{*}{n} = \text{iterated/super logarithm}$$](https://en.wikipedia.org/wiki/Iterated_logarithm)
+    * Inverse of [super exponentiation](https://en.wikipedia.org/wiki/Tetration)
+* Tighter bound: $$O(N + M \alpha(N))$$, where $$\alpha$$ is the inverse [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function)
