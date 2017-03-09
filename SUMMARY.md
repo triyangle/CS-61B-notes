@@ -25,7 +25,7 @@
     * [Asymptotics II](lecture/week07/lec18/lec18.md)
     * [Asymptotics III](lecture/week07/lec19/lec19.md)
   * Week 8
-    * Disjoint Sets
+    * [Disjoint Sets](lecture/week08/lec20.md)
     * Trees, BSTs
     * Balanced BSTs
   * Week 9
