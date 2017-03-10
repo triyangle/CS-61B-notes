@@ -53,7 +53,7 @@
 * Largest item in left subtree **always** has 0 or 1 child (otherwise not largest)
 
 <p align="center">
-    <img src="hibbard">
+    <img src="hibbard.png">
 </p>
 
 ## BST Performance
