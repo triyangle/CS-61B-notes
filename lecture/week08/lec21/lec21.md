@@ -52,6 +52,10 @@
         * Guaranteed to be either case 1 or 2
 * Largest item in left subtree **always** has 0 or 1 child (otherwise not largest)
 
+<p align="center">
+    <img src="hibbard">
+</p>
+
 ## BST Performance
 * Random inserts take on average only $$\Theta(\log{N})$$ each
 
