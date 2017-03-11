@@ -24,10 +24,10 @@
     * Max depth starts at 0 for only 1 element (root) → increments at most $$\log_{2}{N}$$ times, $$\therefore$$ max depth = $$\log_{2}{N}$$
 
 ## Performance Summary
-| Implementation | Constructor   | `connect`      | `isConnected`  |
-|:--------------:|:-------------:|:--------------:|:--------------:|
-| `QuickFindDS` | $$\Theta(N)$$ | $$\Theta(N)$$       | $$\Theta(1)$$       |
-| `QuickUnionDS` | $$\Theta(N)$$ | $$O(N)$$       | $$O(N)$$       |
+| Implementation         | Constructor   | `connect`      | `isConnected`  |
+|:----------------------:|:-------------:|:--------------:|:--------------:|
+| `QuickFindDS`          | $$\Theta(N)$$ | $$\Theta(N)$$  | $$\Theta(1)$$  |
+| `QuickUnionDS`         | $$\Theta(N)$$ | $$O(N)$$       | $$O(N)$$       |
 | `WeightedQuickUnionDS` | $$\Theta(N)$$ | $$O(\log{N})$$ | $$O(\log{N})$$ |
 
 ## Path Compression

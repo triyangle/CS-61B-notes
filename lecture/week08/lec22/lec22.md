@@ -65,15 +65,15 @@
 
 ## Tree Rotation
 * Rotate tree about given node left or right
-* `rotateLeft(G)` → `G` moves left, **promote right child in most natural way**
+* `rotateRight(D)` → `D` moves right, **promote left child in most natural way**
 * Semantics of tree completely unchanged (nodes still in appropriate place w/ respect to ancestors)
-* Reverse operation → `rotateRight(P)`
+* Reverse operation → `rotateLeft(B)`
 * Used to manage height of BSTs
 * Rotations can increase/decrease tree height
 * Preserves search tree property
 * Given arbitrarily unbalanced tree, $$\exists$$ sequence of rotations that will yield balanced tree
 * Balanced search tree = tree $$\propto \log{N}$$ w/in constant factor of 2
-    * Want tree to be balanced → search/insertion operations $$\Theta(N)$$
+    * Want tree to be balanced → search/insertion operations $$\Theta(\log{N})$$
 
 <p align="center">
     <img src="rotation.png">
@@ -114,10 +114,10 @@
 * Can have at most $$M - 1$$ consecutive red edges
 * At most $$M - 1$$ red edges for every black edge along path
     * Height along any given path in red-black tree at most $$M\log{N}$$
+    * $$\forall$$ 2-3 tree (which is balanced), $$\exists$$ corresponding red-black tree that has depth $$\leq 2 \cdot \text{depth of 2-3 tree}$$
 * Searching LLRB tree for key just like BST
     * Red edges only matter in insertions
     * Red edges just like black edges for searching
-* $$\forall$$ 2-3 tree (which is balanced), $$\exists$$ corresponding red-black tree that has depth $$\leq 2 \cdot \text{depth of 2-3 tree}$$
 
 <p align="center">
     <img src="llrb.png">
@@ -181,7 +181,7 @@
 #### Preserving Isometry After Addition/Insertion Operations
 * Violations for 2-3 trees:
     * Existence of 4-nodes
-* Operatiosn for fixing 2-3 tree violations:
+* Operations for fixing 2-3 tree violations:
     * Splitting 4-node
 * Violations for LLRBs:
     * 2 red children

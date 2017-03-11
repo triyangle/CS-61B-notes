@@ -90,3 +90,95 @@
     * Class check w/ `.getClass()`
     * Cast to same type
     * Check fields
+
+## Disjoint Sets
+| Implementation         | Constructor   | `connect`      | `isConnected`  |
+|:----------------------:|:-------------:|:--------------:|:--------------:|
+| `QuickFindDS`          | $$\Theta(N)$$ | $$\Theta(N)$$  | $$\Theta(1)$$  |
+| `QuickUnionDS`         | $$\Theta(N)$$ | $$O(N)$$       | $$O(N)$$       |
+| `WeightedQuickUnionDS` | $$\Theta(N)$$ | $$O(\log{N})$$ | $$O(\log{N})$$ |
+
+## Trees, BSTs
+### Tree
+* Constraint: Exactly one path between any 2 nodes
+
+### BST
+* Consequence of rules = no duplicate keys allowed in BST
+* Random inserts take on average only $$\Theta(\log{N})$$ each
+* Insertion of random data yields bushy BST
+    * On random data, order of growth for get/put operations = logarithmic
+* Randomly deleting and inserting from tree changes height from $$\Theta(\log{N})$$ to $$\Theta(\sqrt{N})$$
+    * Hibbard deletion results in $$\Theta(\sqrt{N})$$ order of growth
+
+## Balanced BSTs
+
+### Perfect Balance & Logarithmic Height
+* Max # of splitting operations per insert: $$\sim H$$
+    * Time per insert/contains: $$\Theta(H) = \Theta(\log{N})$$
+
+### Tree Rotation
+* Preserves search tree property
+* Given arbitrarily unbalanced tree, $$\exists$$ sequence of rotations that will yield balanced tree
+* Balanced search tree = tree $$\propto \log{N}$$ w/in constant factor of 2
+
+<p align="center">
+    <img src="../lecture/week08/lec22/rotation.png">
+</p>
+
+### Left-Leaning Red Back Tree (LLRB)
+* **Every path from root to leaf has same # of black links**
+    * Imposes balance on LLRB
+    * Black edges in LLRB connect 2-3 nodes in 2-3 tree
+    * 2-3 tree balanced on black edges → LLRB also balanced on black edges
+        * Guaranteed logarithmic performance for `insert`
+* Walking along red edges analogous to walking through elements of stuffed node in B-tree
+* \# of red edges used on any given path from root to bottom of tree constrained
+* At most $$M - 1$$ red edges for every black edge along path
+    * Height along any given path in red-black tree at most $$M\log{N}$$
+    * $$\forall$$ 2-3 tree (which is balanced), $$\exists$$ corresponding red-black tree that has depth $$\leq 2 \cdot \text{depth of 2-3 tree}$$
+* Searching LLRB tree for key just like BST
+    * Red edges only matter in insertions
+    * Red edges just like black edges for searching
+<p align="center">
+    <img src="lecture/week08/lec22/llrb.png">
+</p>
+
+### Maintaining Isometry Through Rotations
+* $$\exists$$ isometry between 2-3 tree & LLRB
+* Implementation of LLRB based on maintaining isometry
+* When performing LLRB operations, pretend as if 2-3 tree
+* Preservation of isometry involves tree rotations
+
+<p align="center">
+    <img src="lecture/week08/lec22/isometry.png">
+</p>
+
+#### Preserving Isometry After Addition/Insertion Operations
+* Violations for 2-3 trees:
+    * Existence of 4-nodes
+* Operations for fixing 2-3 tree violations:
+    * Splitting 4-node
+* Violations for LLRBs:
+    * 2 red children
+    * 2 consecutive red links
+    * Right red child (wrong representation)
+* Operations for fixing LLRB tree violations:
+    * Tree rotations & color flips
+
+<p align="center">
+    <img src="lecture/week08/lec22/preserving_isometry.png">
+</p>
+
+### Summary
+* 2-3 & 2-3-4 trees have perfect balance
+    * Height guaranteed logarithmic
+    * After `insert`/`delete` → at most 1 split operation per level of tree
+        * Height logarithmic → $$O(\log{N})$$ splits
+        * `insert`/`delete` $$O(\log{N})$$
+    * Hard to implement
+* LLRBs mimic 2-3 tree behavior using color flipping & tree rotation
+    * Height guaranteed logarithmic
+    * After `insert`/`delete` → at most 1 color flip or rotation per level of tree
+        * Height logarithmic → $$O(\log{N})$$ flips/rotations
+        * `insert`/`delete` $$O(\log{N})$$
+    * Easier to implement, constant factor faster than 2-3 or 2-3-4 tree
