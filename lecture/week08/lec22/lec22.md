@@ -14,11 +14,7 @@
 * If leaf gets more elements than cap, give item to parent
 
 <p align="center">
-    <img src="overstuffed.png">
-</p>
-
-<p align="center">
-    <img src="parent.png">
+    <img src="overstuffed_parent.png">
 </p>
 
 ### Node Splitting
@@ -57,7 +53,7 @@
 
 ## B-Tree
 * B-tree of order $$M = 4$$ also called 2-3-4 tree (or 2-4 tree)
-    * # of children node can have, (e.g. 2-3-4 tree node may have 2, 3, or 4 children)
+    * \# of children node can have, (e.g. 2-3-4 tree node may have 2, 3, or 4 children)
 * B-tree of order $$M = 3$$ also called 2-3 tree
 
 ### Terminology
@@ -114,7 +110,7 @@
     * Red links lean left
 * Red edges connect 2 elements in same node
 * Walking along red edges analogous to walking through elements of stuffed node in B-tree
-* # of red edges used on any given path from root to bottom of tree constrained
+* \# of red edges used on any given path from root to bottom of tree constrained
 * Can have at most $$M - 1$$ consecutive red edges
 * At most $$M - 1$$ red edges for every black edge along path
     * Height along any given path in red-black tree at most $$M\log{N}$$
