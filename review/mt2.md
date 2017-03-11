@@ -140,7 +140,7 @@
     * Red edges only matter in insertions
     * Red edges just like black edges for searching
 <p align="center">
-    <img src="lecture/week08/lec22/llrb.png">
+    <img src="../lecture/week08/lec22/llrb.png">
 </p>
 
 ### Maintaining Isometry Through Rotations
@@ -150,7 +150,7 @@
 * Preservation of isometry involves tree rotations
 
 <p align="center">
-    <img src="lecture/week08/lec22/isometry.png">
+    <img src="../lecture/week08/lec22/isometry.png">
 </p>
 
 #### Preserving Isometry After Addition/Insertion Operations
@@ -166,7 +166,7 @@
     * Tree rotations & color flips
 
 <p align="center">
-    <img src="lecture/week08/lec22/preserving_isometry.png">
+    <img src="../lecture/week08/lec22/preserving_isometry.png">
 </p>
 
 ### Summary
