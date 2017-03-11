@@ -27,7 +27,7 @@
   * Week 8
     * [Disjoint Sets](lecture/week08/lec20/lec20.md)
     * [Trees, BSTs](lecture/week08/lec21/lec21.md)
-    * Balanced BSTs
+    * [Balanced BSTs](lecture/week08/lec22/lec22.md)
   * Week 9
     * Hashing
     * Heaps
