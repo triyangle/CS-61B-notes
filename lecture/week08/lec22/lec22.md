@@ -142,6 +142,7 @@
 
 #### Non-Trivial Case 1: Right-Insert
 * Insert `S` w/ red link to leaf `E`
+
     <p align="center">
         <img src="right_insert.png">
     </p>

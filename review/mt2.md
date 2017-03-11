@@ -139,6 +139,7 @@
 * Searching LLRB tree for key just like BST
     * Red edges only matter in insertions
     * Red edges just like black edges for searching
+
 <p align="center">
     <img src="../lecture/week08/lec22/llrb.png">
 </p>
