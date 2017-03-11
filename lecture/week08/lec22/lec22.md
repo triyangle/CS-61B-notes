@@ -32,7 +32,7 @@
     <img src="chain.png">
 </p>
 
-### Root too stuffed
+### Root Too Stuffed
 
 <p align="center">
     <img src="root_split.png">

@@ -6,7 +6,5 @@
 
 ## Merge Sort
 <p align="center">
-    <img src="merge_motivation.png">
-    <br>
     <img src="merge.png">
 </p>
