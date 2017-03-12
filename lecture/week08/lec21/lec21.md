@@ -40,7 +40,7 @@
 
 #### Case 2: Key w/ 1 Child
 * Goal = maintain BST property
-* Key's child definitely larger than key's parent
+* Key's child definitely larger/smaller than key's parent
     * Safe to just move key's child into key's spot
 
 #### Case 3: Deleting w/ 2 Children (Hibbard deletion)
