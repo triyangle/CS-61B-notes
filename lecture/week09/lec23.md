@@ -39,7 +39,7 @@
 | Type                          | Load Factor $$L$$       |
 |:-----------------------------:|:-----------------------:|
 | External Chaining, Fixed Size | $$\Theta(N)$$           |
-| External Chaining w/ Resizing | $$\Theta(1) (amortized)$$ |
+| External Chaining w/ Resizing | $$\Theta(1) \text{ (amortized)}$$ |
 
 ### Negative `.hashCode`s in Java
 * In Java, `-1 % 4 == -1` → use `Math.floorMod` instead
@@ -57,12 +57,14 @@
 
 ## Hash Functions
 > The value 31 was chosen because it is an odd prime. If it were even and the multiplication overflowed, information would be lost, as multiplication by 2 is equivalent to shifting. The advantage of using a prime is less clear, but it is traditional. A nice property of 31 is that the multiplication can be replaced by a shift and a subtraction for better performance: `31 * i == (i << 5) - i`. Modern VMs do this sort of optimization automatically.
+
 * Bit shifting left introduces 0 on right → loses bit on left of number's binary representation → clear information loss
     * Repeated bit shifting → gradually lose all info accumulated from earlier computation
     * More fields entering hashcode calculation → less effect on final result early fields have
 
 ### Hash a Collection
 * `List`s a lot like `String`s: Collection of items each w/ own `hashCode`:
+
 ```java
 @Override
 public int hashCode() {
@@ -81,6 +83,7 @@ public int hashCode() {
 ### Hashing a Recursive Data Structure
 * Computation of `hashCode` of recursive data structure involves recursive computation
 * Ex: binary tree `hashCode` (assuming sentinel leaves, i.e. `this.left` never `null`)
+
 ```java
 @Override
 public int hashCode() {
@@ -118,4 +121,4 @@ public int hashCode() {
 ## Open Addressing: Alternate Disambiguation Strategy
 * If target bucket already occupied, use different bucket, e.g.
     * Linear probing: Use next address, & if already occupied, just keep scanning one by one
-    * Quadratic probing: Use next address, & if already occupied, try looking 4 ahead, 9 ahead, 16 ahead, ... $$i^{2}$$ ahead
+    * Quadratic probing: Use next address, & if already occupied, try looking 4 ahead, 9 ahead, 16 ahead, $$\dots ,\ i^{2}$$ ahead
