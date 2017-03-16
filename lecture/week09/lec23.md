@@ -59,7 +59,7 @@
 > The value 31 was chosen because it is an odd prime. If it were even and the multiplication overflowed, information would be lost, as multiplication by 2 is equivalent to shifting. The advantage of using a prime is less clear, but it is traditional. A nice property of 31 is that the multiplication can be replaced by a shift and a subtraction for better performance: `31 * i == (i << 5) - i`. Modern VMs do this sort of optimization automatically.
 * Bit shifting left introduces 0 on right → loses bit on left of number's binary representation → clear information loss
     * Repeated bit shifting → gradually lose all info accumulated from earlier computation
-    * More fields entering hashcode calcuation → less effect on final result early fields have
+    * More fields entering hashcode calculation → less effect on final result early fields have
 
 ### Hash a Collection
 * `List`s a lot like `String`s: Collection of items each w/ own `hashCode`:

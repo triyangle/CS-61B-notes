@@ -183,3 +183,32 @@
         * Height logarithmic → $$O(\log{N})$$ flips/rotations
         * `insert`/`delete` $$O(\log{N})$$
     * Easier to implement, constant factor faster than 2-3 or 2-3-4 tree
+
+## Hashing
+
+### Hash Tables
+* Never store mutable objects in `HashSet` or `HashMap`
+* Never override `equals` w/out also overriding `hashCode`
+
+### Hash Functions
+* Computing hash function consists of 2 steps:
+    1. Compute `hashCode` (integer between $$-2^{31}$$ & $$2^{31} - 1$$
+    2. Computing index = `hashCode` $$\mod M$$
+
+### Default `hashCodes()`
+* All `Objects` have `hashCode()` function
+* Default: returns `this` (address of object)
+
+### Negative `.hashCode`s in Java
+* In Java, `-1 % 4 == -1` → use `Math.floorMod` instead
+
+### Summary
+* W/ good `hashCode()` & resizing, operations are $$\Theta(1)$$ amortized
+* Store & retrieval does not require items to be `Comparable` (unlike (balanced) BST)
+
+| Data Structure                 | `contains(x)`       | `insert(x)`         |
+|:------------------------------:|:-------------------:|:-------------------:|
+| Linked List                    | $$\Theta(N)$$       | $$\Theta(N)$$       |
+| Bushy BSTs (used by `TreeSet`) | $$\Theta(\log{N})$$ | $$\Theta(\log{N})$$ |
+| Unordered Array                | $$\Theta(N)$$       | $$\Theta(N)$$       |
+| Hash Table (used by `HashSet`) | $$\Theta(1)$$       | $$\Theta(1)$$       |
