@@ -123,6 +123,7 @@
 
 <p align="center">
     <img src="../lecture/week08/lec22/rotation.png">
+    <img src="../lecture/week08/lec22/tree_rotation.gif">
 </p>
 
 ### Left-Leaning Red Back Tree (LLRB)

@@ -77,7 +77,10 @@
 
 <p align="center">
     <img src="rotation.png">
+    <img src="tree_rotation.gif">
 </p>
+
+
 
 ## Red-Black Trees
 * 2-3 trees & 2-3-4 trees pain to implement & suffer from performance problems
