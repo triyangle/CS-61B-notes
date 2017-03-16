@@ -29,7 +29,7 @@
     * [Trees, BSTs](lecture/week08/lec21/lec21.md)
     * [Balanced BSTs](lecture/week08/lec22/lec22.md)
   * Week 9
-    * Hashing
+    * [Hashing](lecture/week09/lec23.md)
     * Heaps
     * Advanced Trees, incl. Geometric
   * Week 10
