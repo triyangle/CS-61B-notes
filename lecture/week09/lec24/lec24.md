@@ -34,7 +34,10 @@ public interface MinPQ<Item> {
     * `leftChild(k) = k * 2`
     * `rightChild(k) = k * 2 + 1`
     * `parent(k) = k / 2`
-INSERT PICS
+
+<p align='center'>
+    <img src='tree_rep.png'>
+</p>
 
 ## Heap Implementation of a Priority Queue
 | Operation        | Ordered Array | Bushy BST (items w/ same priority hard to handle) | Hash Table    | Heap                |
@@ -57,7 +60,7 @@ INSERT PICS
 ### The Search Problem
 * Given stream of data, retrieve info of interest
 
-### Search Data Structures
+### [Search Data Structures](https://docs.google.com/presentation/d/1Y5egsKkY2Ya1-6FhOkRo7bekvmK464u7AznXQrMmGTI/edit#slide=id.g1d25fc641c_0_0)
 | Data Structure | Storage Operation(s)                 | Primary Retrieval Operation | Retrieve By:   |
 |:--------------:|:------------------------------------:|:---------------------------:|:--------------:|
 | List           | `add(key)` <br> `insert(key, index)` | `get(index)`                | `index`        |
@@ -65,7 +68,3 @@ INSERT PICS
 | Set            | `add(key)`                           | `containsKey(key)`          | key identity   |
 | PQ             | `add(key)`                           | `getSmallest()`             | key order/size |
 | Disjoint Sets  | `conenct(int1, int2)`                | `isConnected(int1, int2)`   | 2 int values   |
-INSERT PICS
-
-##
-INSERT PICS
