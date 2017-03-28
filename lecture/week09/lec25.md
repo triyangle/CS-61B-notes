@@ -31,7 +31,7 @@
 
 ### [Handling Multidimensional Data: Quadtrees](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g11f3cf3f77_0_157)
 * [Generalization of BST](https://docs.google.com/presentation/d/1vqAJkvUxSh-Eq4iIJZevjpY29nagNTjx-4N3HpDi0UQ/edit#slide=id.g11f44e6637_0_250)
-* Think of items as oriented in particular 2D direction (e.g NW/NE/SW/SE instead of binary \</\>)
+* Think of items as oriented in particular 2D direction (e.g NW/NE/SW/SE instead of binary </\>)
 * Can have mutliple different quadtrees for same set of data
     * Just like BST, insertion order determines topology of QuadTree
 * If on boundary line, usually assume = → >

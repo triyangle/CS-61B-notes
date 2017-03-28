@@ -33,7 +33,7 @@
     * [Heaps](lecture/week09/lec24/lec24.md)
     * [Advanced Trees, incl. Geometric](lecture/week09/lec25.md)
   * Week 10
-    * Graphs
+    * [Graphs](lecture/week10/lec26.md)
     * Graph Traversals
     * Regular Expressions
   * Week 11
