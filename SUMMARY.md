@@ -31,7 +31,7 @@
   * Week 9
     * [Hashing](lecture/week09/lec23.md)
     * [Heaps](lecture/week09/lec24/lec24.md)
-    * [Advanced Trees, incl. Geometric](lecture/week09/lec24.md)
+    * [Advanced Trees, incl. Geometric](lecture/week09/lec25.md)
   * Week 10
     * Graphs
     * Graph Traversals
