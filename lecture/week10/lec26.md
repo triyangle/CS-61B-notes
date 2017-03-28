@@ -33,5 +33,5 @@
     * Guaranteed to reach every reachable node
     * Runs in $$O(V + E)$$ time
         * Every edge used at most once, total # of vertex considerations = # of edges
-            * \# of times need to consider vertex \<= # of edges incident on it
+            * \# of times need to consider vertex <= # of edges incident on it
             * May be faster for some problems which quit early on some stopping condition (e.g. connectivity)
