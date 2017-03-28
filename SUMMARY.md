@@ -35,6 +35,7 @@
   * Week 10
     * Graphs
     * Graph Traversals
+    * Regular Expressions
   * Week 11
     * Shortest Paths
     * MSTs

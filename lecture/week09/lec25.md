@@ -9,15 +9,14 @@
 * Level Order
     * Traverse top-to-bottom, left-to-right
     * Nodes "visited" in given order
-
 * [Depth First Traversals](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0693)
     * Preorder (root, left, right), Inorder (left, root, right), Postorder (left, right, root)
         * [A Weird Trick](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0715)
         * [Preorder Traversal Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g42d4f6d39_0109)
 * Level Order Traversal
     * [Iterative Deepening](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_028)
-        * [Runtime]() $$\Theta(N)$$ b/c each new level doubles amount of work done & nodes visited
-            * Exponential in height of tree → $$\Theta(2^{H})$$ → height logarithmic in # of nodes, $$H = \Theta(\log{N})$$ → overall runtime linear in # of nodes, $$\Theta(N)$$
+        * [Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0159) $$\Theta(N)$$ b/c each new level doubles amount of work done & # of nodes visited
+            * Exponential in height of tree, $$\Theta(2^{H})$$ → height logarithmic in # of nodes, $$H = \Theta(\log{N})$$ → overall runtime linear in # of nodes, $$\Theta(N)$$
         * [Spindly Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0210) $$\Theta(N^{2})$$
         * [Tree Height & Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0223)
 
