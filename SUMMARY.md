@@ -34,7 +34,7 @@
     * [Advanced Trees, incl. Geometric](lecture/week09/lec25.md)
   * Week 10
     * [Graphs](lecture/week10/lec26.md)
-    * Graph Traversals
+    * [Graph Traversals](lecture/week10/lec27.md)
     * Regular Expressions
   * Week 11
     * Shortest Paths
