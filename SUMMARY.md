@@ -35,7 +35,7 @@
   * Week 10
     * [Graphs](lecture/week10/lec26.md)
     * [Graph Traversals](lecture/week10/lec27.md)
-    * Regular Expressions
+    * [Regular Expressions](lecture/week10/lec28.md)
   * Week 11
     * Shortest Paths
     * MSTs
