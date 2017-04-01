@@ -31,6 +31,7 @@
     * `find` operation performed by following chain of parent references from item to root of tree
     * Cost $$\propto$$ item's depth in tree
 
+
 * Two optimizations:
     * ***Union-by-size*** helps `union` operation build shorter trees
     * ***Path compression*** gives `find` operation power to shorten trees
@@ -75,7 +76,7 @@ public int find(int x) {
     * Path compression doesn't improve worst-case time, but improves *average* running time substantially
         * Although `find` operation can take $$\Theta(\log{u})$$ time, path compression will make operation fast if done again
     * Average running time of `find` & `union` operations in quick-union data structure so close to constant (hardly worth mentioning that, in rigorous asymptotic sense, slightly slower than constant)
-* Sequence of $$f$$ `find` & $$u$$ `union` operations (in any order & possibly interleaved) takes $$\Theta(u + f \alpha(f + u, u))$$ time in worst case
+* Sequence of $$f$$ `find` & $$u$$ `union` operations (in any order & possibly interleaved) takes $$\Theta(u + f \cdot \alpha(f + u, u))$$ time in worst case
     * $$\alpha$$ = extremely slowly-growing function, ***inverse Ackermann function***
         * Inverse Ackermann function never larger than 4 for any practical values of $$f$$ & $$u$$, but does grow arbitrarily large (for unimaginably gigantic values of $$f$$ & $$u$$)
         * $$\forall$$ practical purposes, can think of quick-union as having `find` operations that run, on overage, in constant time
