@@ -36,7 +36,7 @@
     * Just like BST, insertion order determines topology of QuadTree
 * If on boundary line, usually assume = → >
 * [Pruning](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g11f3cf3f77_0_350)
-    * Analogous binary search on BST (eliminate unnecessary search spaces)
+    * Analogous to binary search on BST (eliminate unnecessary search spaces)
     * Ignore branches if no possible way branch could contain wanted item
 
 ## Tree Iterators (Extra)

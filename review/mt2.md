@@ -213,3 +213,208 @@
 | Bushy BSTs (used by `TreeSet`) | $$\Theta(\log{N})$$ | $$\Theta(\log{N})$$ |
 | Unordered Array                | $$\Theta(N)$$       | $$\Theta(N)$$       |
 | Hash Table (used by `HashSet`) | $$\Theta(1)$$       | $$\Theta(1)$$       |
+
+## [Priority Queues & Heaps](../lecture/week09/lec24/lec24.md)
+
+### Priority Queue Interface
+```java
+/** (Min) Priority Queue: Allowing tracking & removal of smallest item in priority queue */
+public interface MinPQ<Item> {
+    public void add(Item x);
+    public Item getSmallest();
+    public Item removeSmallest();
+    public int size();
+}
+```
+
+* Only allows interaction w/ smallest item at any given time → better performance than `List`/`Set`
+* Useful for keeping track of "smallest", "largest", "best", etc. seen so far
+
+### Heaps
+* Binary min-heap: Binary tree that is ***complete*** & obeys ***min-heap property***
+    * **Min-heap property:** Every node $$\leq$$ both its children
+    * **Complete:** Missing items only at bottom level (if any), all nodes as far left as possible
+
+#### [Insertion](https://docs.google.com/presentation/d/1VEd2Pm_3OuvkC1M8T5XAhsBTQFxVHs386L79hktkDRg)
+* Add to end of heap temporarily
+* Swim up hierarchy
+
+#### [Delete Min](https://docs.google.com/presentation/d/1VEd2Pm_3OuvkC1M8T5XAhsBTQFxVHs386L79hktkDRg/edit#slide=id.g11ecaeaf56_0_374)
+* Swap last item in heap into root
+* Sink down hierarchy (promote "better" successor)
+
+### Tree Representation
+* Store keys in array, offset everything by 1 spot
+* Leave spot 0 empty
+* Makes computation of children/parents "nicer"
+    * `leftChild(k) = k * 2`
+    * `rightChild(k) = k * 2 + 1`
+    * `parent(k) = k / 2`
+
+<p align='center'>
+    <img src='../lecture/week09/lec24/tree_rep.png'>
+</p>
+
+### Heap Implementation of a Priority Queue
+| Operation        | Ordered Array | Bushy BST (items w/ same priority hard to handle) | Hash Table    | Heap                |
+|:----------------:|:-------------:|:-------------------------------------------------:|:-------------:|:-------------------:|
+| `add`            | $$\Theta(N)$$ | $$\Theta(\log{N})$$                               | $$\Theta(1)$$ | $$\Theta(\log{N})$$ |
+| `getSmallest`    | $$\Theta(1)$$ | $$\Theta(\log{N})$$                               | $$\Theta(N)$$ | $$\Theta(1)$$       |
+| `removeSmallest` | $$\Theta(N)$$ | $$\Theta(\log{N})$$                               | $$\Theta(N)$$ | $$\Theta(\log{N})$$ |
+
+* Position in tree/heap = priority
+* Heap is $$\log{N}$$ time amortized (resize backing array)
+* BST can have constant `getSmallest` by keeping pointer to smallest
+* Heaps handle duplicate priorities much more naturally than BSTs
+* Array based heaps take less memory
+
+### Data Structures Summary
+#### [Search Data Structures](https://docs.google.com/presentation/d/1Y5egsKkY2Ya1-6FhOkRo7bekvmK464u7AznXQrMmGTI/edit#slide=id.g1d25fc641c_0_0)
+| Data Structure | Storage Operation(s)                 | Primary Retrieval Operation | Retrieve By:   |
+|:--------------:|:------------------------------------:|:---------------------------:|:--------------:|
+| List           | `add(key)` <br> `insert(key, index)` | `get(index)`                | `index`        |
+| Map            | `put(key, value)`                    | `get(key)`                  | key identity   |
+| Set            | `add(key)`                           | `containsKey(key)`          | key identity   |
+| PQ             | `add(key)`                           | `getSmallest()`             | key order/size |
+| Disjoint Sets  | `conenct(int1, int2)`                | `isConnected(int1, int2)`   | 2 int values   |
+
+## [Advanced Trees, including Geometric](../lecture/week09/lec25.md)
+### Traversals
+
+#### Tree Traversal
+* Level Order
+    * Traverse top-to-bottom, left-to-right
+    * Nodes "visited" in given order
+* [Depth First Traversals](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0693)
+    * Preorder (root, left, right), Inorder (left, root, right), Postorder (left, right, root)
+        * [A Weird Trick](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0715)
+        * [Preorder Traversal Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g42d4f6d39_0109)
+* Level Order Traversal
+    * [Iterative Deepening](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_028)
+        * [Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0159) $$\Theta(N)$$ b/c each new level doubles amount of work done & # of nodes visited
+            * Exponential in height of tree, $$\Theta(2^{H})$$ → height logarithmic in # of nodes, $$H = \Theta(\log{N})$$ → overall runtime linear in # of nodes, $$\Theta(N)$$
+        * [Spindly Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0210) $$\Theta(N^{2})$$
+        * [Tree Height & Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g75c09ac94_0223)
+
+### Range Finding
+* Instead of traversing entire tree, only want to look at items in certain range
+
+#### Pruning & `findInRange` Runtime
+* **Pruning:** Restrict search to only nodes containing path(s) to answer(s)
+* [Runtime](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g11f3cf3f77_0_250)
+
+### Spatial Trees
+
+#### [Handling Multidimensional Data: Quadtrees](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g11f3cf3f77_0_157)
+* [Generalization of BST](https://docs.google.com/presentation/d/1vqAJkvUxSh-Eq4iIJZevjpY29nagNTjx-4N3HpDi0UQ/edit#slide=id.g11f44e6637_0_250)
+* Think of items as oriented in particular 2D direction (e.g NW/NE/SW/SE instead of binary </\>)
+* Can have mutliple different quadtrees for same set of data
+    * Just like BST, insertion order determines topology of QuadTree
+* If on boundary line, usually assume = → >
+* [Pruning](https://docs.google.com/presentation/d/1ifkiC-l0DfQRXEHFfQpg_AcZkaUyj9CCEUKOYPuyBZ0/edit#slide=id.g11f3cf3f77_0_350)
+    * Analogous to binary search on BST (eliminate unnecessary search spaces)
+    * Ignore branches if no possible way branch could contain wanted item
+
+## [Graphs](../lecture/week10/lec26.md)
+### [Graph Types](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g52b1323b6_0160)
+* **Directed:** Edges have notion of direction (one-way)
+    * **Acyclic:** No cycles (lead back to start)
+    * **Cyclic:** $$\exists \geq 1 \text{ cycle}$$
+* **Undirected:** No notion of directionality, can traverse either way (bidirectional?)
+    * **Acyclic:** No cycles (lead back to start) w/out reusing any edges
+    * **Cyclic:** $$\exists \geq 1 \text{ path that leads to start w/out reusing any edges}$$
+* Any graph w/ cycle = cyclic
+    * If not → acyclic
+* [Terminology](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit)
+* [Graph Processing Problems](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_0_8)
+
+### Graph Representations
+* [Common Simplification](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_41)
+* Degree = # of edges incident on graph node
+* [Graph API](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g127a4373ba_0_21)
+* [Adjacency Matrix](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_79)
+    * [Runtime](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit)
+* [Edge Sets](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g52b1323b6_0612)
+* [Adjacency Lists](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g471792ea7_033)
+    * [Runtime](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g127a4373ba_0_41)
+        * If sparse graph (few edges) → $$\Theta(V)$$
+        * If dense graph (many edges) → $$\Theta(E)$$
+    * [Bare-Bones Undirected Graph Implementation](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_196)
+* [Summary](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_142)
+
+### [Depth First Traversal](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_380)
+* [Implementation](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_480)
+* Properties
+    * Guaranteed to reach every reachable node
+    * Runs in $$O(V + E)$$ time
+        * Every edge used at most once, total # of vertex considerations = # of edges
+            * \# of times need to consider vertex $$<=$$ # of edges incident on it
+            * May be faster for some problems which quit early on some stopping condition (e.g. connectivity)
+
+
+## [Graph Traversals](../lecture/week10/lec27.md)
+
+### [Graph Problems](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_173)
+* Runtime $$\Theta(V + E)$$
+    * Each vertex visited exactly once, each visit = constant time
+    * Each edge considered once
+* Space $$\Theta(V)$$
+    * Recursive call stack depth $$\leq V$$
+    * Space of recursive algorithm = depth of call stack
+
+### [Graph Traversals](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_30)
+* Level-order/BFS for vertices at same distance from source can be in any permutation
+* If $$\exists$$ multiple paths to a vertex, BFS always visits based on [closest path](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g128656a55e_0_70)
+* [Traversals & Graph Problems](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_670)
+
+### [Topological Sorting](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_1182)
+* Indegree 0 vertices → $$\Theta(E + V)$$, have to look at $$V$$ lists w/ total length $$E$$
+* Only works if graph is acyclic → $$\varnothing$$ if cyclic b/c can't have circular dependencies
+    * No indegree 0 vertices → cyclic → $$\varnothing$$
+* Topological ordering only possible iff graph is directed acyclic graph (no directed cycles)
+* [Linearizes graph](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_401)
+* [Graph Problems](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_1236)
+
+#### Implementation
+
+```java
+public class DepthFirstOrder {
+
+    private boolean[] marked;
+    private Stack<Integer> reversePostorder; // using stack analogous to reversing list b/c LIFO
+
+    public DepthFirstOrder(Digraph G) {
+        reversePostorder = new Stack<>();
+        marked = new boolean[G.V()];
+        for (int v = 0; v < G.V(); v++) {
+            if (!marked[v]) {
+                dfs(G, v);
+            }
+        }
+    }
+
+    private void dfs(Digraph G, int v) {
+        marked[v] = true;
+        for (int w : G.adj(v)) {
+            if (!marked[w]) {
+                dfs(G, w);
+            }
+        }
+        reversePostorder.push(v); // after each DFS is done, "visit" vertex by pushing on stack
+    }
+}
+```
+
+* Works even when starting from vertices not indegree 0
+
+### [Breadth First Search](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_1268)
+* [Finding Level-Order](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_1302)
+
+## Regular Expressions
+* [Introducing the Regular Expression](https://docs.google.com/presentation/d/1T50c8YVBKzSBf97Hk1Jyt_3c27yY6-YKXplJP75BSC8/edit#slide=id.g1f24a78b1f_3_11)
+* `[]` = set
+
+### Regular Expressions in Java
+* Default `String` method `matches` matches entire `String`, but not substrings
+* `group(0)` = first match of entire pattern, entire match
+    * `group(i)`, `i > 0` = parenthesized groupings

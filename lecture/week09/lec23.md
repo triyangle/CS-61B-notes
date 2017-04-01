@@ -120,5 +120,5 @@ public int hashCode() {
 
 ## Open Addressing: Alternate Disambiguation Strategy
 * If target bucket already occupied, use different bucket, e.g.
-    * Linear probing: Use next address, & if already occupied, just keep scanning one by one
-    * Quadratic probing: Use next address, & if already occupied, try looking 4 ahead, 9 ahead, 16 ahead, $$\dots ,\ i^{2}$$ ahead
+    * **Linear probing:** Use next address, & if already occupied, just keep scanning one by one
+    * **Quadratic probing:** Use next address, & if already occupied, try looking 4 ahead, 9 ahead, 16 ahead, $$\dots ,\ i^{2}$$ ahead
