@@ -64,6 +64,8 @@
       * [2.4 Arrays](reading/Ch2/4.md)
       * [2.5 The AList](reading/Ch2/5.md)
   * JRS Notes
+      * [Encapsulation](reading/jrs/encapsulation.md)
+      * [Disjoint Sets](reading/jrs/disjoint_sets.md)
   * [Algorithms, 4th Edition](http://algs4.cs.princeton.edu/home/)
     * [1. Fundamentals](http://algs4.cs.princeton.edu/10fundamentals/)
       * 1.4 Analysis of Algorithms
