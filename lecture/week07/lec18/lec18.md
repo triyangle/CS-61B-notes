@@ -2,7 +2,7 @@
 * Use arithmetic/geometric sum formulas
     * **Arithmetic:**
         * $$S = n \cdot \frac{a_{1} + a_{n}}{2}$$
-        * $$S = \frac{n}{2} \cdot [2a_{1} + (n - 1) \cdot d] = n \cdot a_{1} + \frac{n \cdot (n - 1) \cdot d}{2}$$
+        * $$S = \frac{n}{2} \cdot [2a_{1} + (n - 1) \cdot d] = n \cdot a_{1} + \frac{(n - 1) \cdot n \cdot d}{2}$$
     * **Geometric:**
         * $$S = \frac{a_{1} \cdot (1 - r^{n})}{1 - r}$$
         * **Infinite ($$r < 1$$):** $$S = \frac{a_{1}}{1 - r}$$

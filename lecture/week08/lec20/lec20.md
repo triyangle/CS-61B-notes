@@ -18,7 +18,7 @@
         * Occurs only when `weight(T2) >= weight(T1)`
         * Size of resulting tree is at least doubled
         * Depth of element `x` incremented only when `weight(T2) >= weight(T1)` & resulting tree at least doubled in size
-    * Tree containing `x` can double in size at most $$\log{N}$$ times, when starting from just 1 element
+    * Tree containing `x` can double in size at most $$\log_{2}{N}$$ times, when starting from just 1 element
         * $$1 \cdot 2^x = N$$
         * $$x = \log_{2}{N}$$
     * Max depth starts at 0 for only 1 element (root) → increments at most $$\log_{2}{N}$$ times, $$\therefore$$ max depth = $$\log_{2}{N}$$
