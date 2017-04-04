@@ -9,7 +9,7 @@
     * Average case: 𝚯(1)
 
 ## Using Potentials for Amortization
-* [Amortized Analysis](www.cs.cornell.edu/courses/cs3110/2011sp/lectures/lec20-amortized/amortized.htm)
+* [Amortized Analysis](http://www.cs.cornell.edu/courses/cs3110/2011sp/lectures/lec20-amortized/amortized.htm)
 * Associate potential $$\Phi_i \geq 0$$ w/ $$i\text{th}$$ operation that tracks "saved up" time from cheap operations for spending on expensive ones, starting from $$\Phi_0 = 0$$
 * Define cost of $$i\text{th}$$ operation as $$a_i = c_i + \Phi_{i + 1} - \Phi_i$$
     * $$a_i = \text{deposit}$$
