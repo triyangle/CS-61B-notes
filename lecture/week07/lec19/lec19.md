@@ -9,6 +9,7 @@
     * Average case: 𝚯(1)
 
 ## Using Potentials for Amortization
+* [Amortized Analysis](www.cs.cornell.edu/courses/cs3110/2011sp/lectures/lec20-amortized/amortized.htm)
 * Associate potential $$\Phi_i \geq 0$$ w/ $$i\text{th}$$ operation that tracks "saved up" time from cheap operations for spending on expensive ones, starting from $$\Phi_0 = 0$$
 * Define cost of $$i\text{th}$$ operation as $$a_i = c_i + \Phi_{i + 1} - \Phi_i$$
     * $$a_i = \text{deposit}$$
@@ -20,8 +21,10 @@
     * Requires choosing $$a_i : \Phi_i > c_i$$
     * Cost for operations is 1 for non-powers of 2, & $$2i + 1$$ for powers of 2
     * For high cost ops, need $$\sim 2i + 1$$ in bank, have previous $$\frac{i}{2}$$ operations to reach balance
+        * $$\frac{i}{2} \cdot (a_{i} - 1) - 2i \geq 0$$
+        * $$a_{i} \geq 5$$
 * On average, each op takes constant time, arrays = good lists
-    * Rigorously show by overestimating constant time of each operation & proving resulting potential never < 0
+    * Rigorously show by overestimating constant time of each operation & proving resulting potential never $$< 0$$
 
 ## Empirical Analysis
 ### Tilde Notation
