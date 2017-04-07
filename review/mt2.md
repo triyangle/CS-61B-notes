@@ -163,11 +163,11 @@
 * Tighter bound: $$O(N + M \alpha(N))$$, where $$\alpha$$ is the inverse [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function)
 
 <p align="center">
-    <img src="weighted.png">
+    <img src="../lecture/week08/lec20/weighted.png">
     <br>
-    <img src="dynamic.png">
+    <img src="../lecture/week08/lec20/dynamic.png">
     <br>
-    <img src="nazca.png">
+    <img src="../lecture/week08/lec20/nazca.png">
 </p>
 
 
