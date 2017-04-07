@@ -106,6 +106,8 @@
 * $$\text{lg}(N) = \log_2(N)$$
 * $$\lceil f(N) \rceil \in \Theta(f(N))$$
 * $$\lfloor f(N) \rfloor \in \Theta(f(N))$$
+* May need to state what $$N$$ if not explicitly in problem
+* If $$f(n) \in O(g(n)), 2^{f(n)} \in O(2^{g(n)})$$ → false b/c actual $$g(n)$$ could be scaled less than $$f(n)$$
 
 ### Using Potentials for Amortization
 * [Amortized Analysis](http://www.cs.cornell.edu/courses/cs3110/2011sp/lectures/lec20-amortized/amortized.htm)
@@ -116,12 +118,13 @@
     * $$\Phi_{i + 1} - \Phi_i = \text{total holdings}$$
 * On cheap operations, pick $$a_i > c_i$$ → $$\Phi$$ ↑
 * On expensive operations, pick $$a_i : \Phi_i > 0$$
-* Goals for ArrayList: $$a_i \in \Theta(1) \text{ and } \Phi_i \geq 0\ \forall\ i$$
+* Goals for `ArrayList`: $$a_i \in \Theta(1) \text{ and } \Phi_i \geq 0\ \forall\ i$$
     * Requires choosing $$a_i : \Phi_i > c_i$$
     * Cost for operations is 1 for non-powers of 2, & $$2i + 1$$ for powers of 2
     * For high cost ops, need $$\sim 2i + 1$$ in bank, have previous $$\frac{i}{2}$$ operations to reach balance
         * $$\frac{i}{2} \cdot (a_{i} - 1) - 2i \geq 0$$
         * $$a_{i} \geq 5$$
+    * `ArrayList` amortized $$\Theta(1)$$ insertion/removal if utilizing geometric resizing
 * On average, each op takes constant time, arrays = good lists
     * Rigorously show by overestimating constant time of each operation & proving resulting potential never $$< 0$$
 
@@ -132,8 +135,44 @@
 | `QuickFindDS`          | $$\Theta(N)$$ | $$\Theta(N)$$  | $$\Theta(1)$$  |
 | `QuickUnionDS`         | $$\Theta(N)$$ | $$O(N)$$       | $$O(N)$$       |
 | `WeightedQuickUnionDS` | $$\Theta(N)$$ | $$O(\log{N})$$ | $$O(\log{N})$$ |
+* Tree height = # of edges from root of deepest node
+    * Root has depth 0
+
+### Weighted Quick Union
+* Modify quick-union to avoid tall trees
+    * Track tree size (**number** of elements), also works similarly for height
+    * Always link root of ***smaller*** tree ***to larger*** tree
+* Max depth of any item is $$\log{N}$$
+    * Depth of element `x` only increases when tree `T1` that contains `x` linked below other tree `T2`
+        * Occurs only when `weight(T2) >= weight(T1)`
+        * Size of resulting tree is at least doubled
+        * Depth of element `x` incremented only when `weight(T2) >= weight(T1)` & resulting tree at least doubled in size
+    * Tree containing `x` can double in size at most $$\log_{2}{N}$$ times, when starting from just 1 element
+        * $$1 \cdot 2^x = N$$
+        * $$x = \log_{2}{N}$$
+    * Max depth starts at 0 for only 1 element (root) → increments at most $$\log_{2}{N}$$ times, $$\therefore$$ max depth = $$\log_{2}{N}$$
+
+### Path Compression
+* When doing `isConnected(15, 10)`, tie all nodes seen to the root
+    * Additional cost insignificant (same order of growth)
+* Kinda memoization/dynamic programming?
+* Path compression results in union/connected operations very close to amortized constant time
+* $$M$$ operations on $$N$$ nodes = $$O(N + M \lg^{*}{N})$$
+* [$$\log^{*}{n} = \text{iterated/super logarithm}$$](https://en.wikipedia.org/wiki/Iterated_logarithm)
+    * Inverse of [super exponentiation](https://en.wikipedia.org/wiki/Tetration)
+* Tighter bound: $$O(N + M \alpha(N))$$, where $$\alpha$$ is the inverse [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function)
+
+<p align="center">
+    <img src="weighted.png">
+    <br>
+    <img src="dynamic.png">
+    <br>
+    <img src="nazca.png">
+</p>
+
 
 ## Trees, BSTs
+
 ### Tree
 * Constraint: Exactly one path between any 2 nodes
 
@@ -144,8 +183,20 @@
     * On random data, order of growth for get/put operations = logarithmic
 * Randomly deleting and inserting from tree changes height from $$\Theta(\log{N})$$ to $$\Theta(\sqrt{N})$$
     * Hibbard deletion results in $$\Theta(\sqrt{N})$$ order of growth
+* Deletion [not commutative](http://www.cs.cornell.edu/courses/cs409/2000SP/Homework/hw03Solution.htm)
+
+### `TreeMap`/`TreeSet`
+* `BST` internally
+* Sorted/ordered `Map`
+* Self-balancing, $$\log{N}$$ height
+* Insertion/removal/searching → $$\log{N}$$
 
 ## Balanced BSTs
+
+### B-Tree
+* B-tree of order $$M = 4$$ also called 2-3-4 tree (or 2-4 tree)
+    * \# of children node can have, (e.g. 2-3-4 tree node may have 2, 3, or 4 children)
+* B-tree of order $$M = 3$$ also called 2-3 tree
 
 ### Perfect Balance & Logarithmic Height
 * Max # of splitting operations per insert: $$\sim H$$
@@ -237,6 +288,34 @@
 
 ### Negative `.hashCode`s in Java
 * In Java, `-1 % 4 == -1` → use `Math.floorMod` instead
+* When finding bucket to insert into, use `bucketNum = (o.hashCode() & 0x7FFFFFFF) % M`
+    * `M` = # of buckets
+    * Can flip negative bit or use `Math.floorMod`
+
+### Good `hashCodes()`
+* Wide variety/range of objects ("random")
+* Deterministic
+* If 2 objects equal by `.equals()` → must have same `hashCode()`
+* Efficiently computed
+* Doesn't use mutable fields
+
+### `.equals()`
+```java
+@Override
+public boolean equals(Object other) {
+    if (this == o) {
+        return true;
+    }
+
+    if (o == null || getClass() != o.getClass()) {
+        return false;
+    }
+
+    SimpleOomage that = (SimpleOomage) o;
+
+    return (red == that.red) && (green == that.green) && (blue == that.blue); // check equality of fields
+}
+```
 
 ### Summary
 * W/ good `hashCode()` & resizing, operations are $$\Theta(1)$$ amortized
@@ -289,6 +368,10 @@ public interface MinPQ<Item> {
 <p align='center'>
     <img src='../lecture/week09/lec24/tree_rep.png'>
 </p>
+
+#### BST → Heap
+* Swim (heapify up) all nodes in level order (analogous to adding element to heap)
+* Sink all nodes in reverse level order (analogous to removing element from heap)
 
 ### Heap Implementation of a Priority Queue
 | Operation        | Ordered Array | Bushy BST (items w/ same priority hard to handle) | Hash Table    | Heap                |
@@ -369,6 +452,7 @@ public interface MinPQ<Item> {
 * [Graph API](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g127a4373ba_0_21)
 * [Adjacency Matrix](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_2_79)
     * [Runtime](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit)
+    * Rows = start nodes, columns = end nodes
 * [Edge Sets](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g52b1323b6_0612)
 * [Adjacency Lists](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g471792ea7_033)
     * [Runtime](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g127a4373ba_0_41)
@@ -385,6 +469,7 @@ public interface MinPQ<Item> {
         * Every edge used at most once, total # of vertex considerations = # of edges
             * \# of times need to consider vertex $$<=$$ # of edges incident on it
             * May be faster for some problems which quit early on some stopping condition (e.g. connectivity)
+* Postorder = return order
 
 
 ## [Graph Traversals](../lecture/week10/lec27.md)
@@ -401,12 +486,14 @@ public interface MinPQ<Item> {
 * Level-order/BFS for vertices at same distance from source can be in any permutation
 * If $$\exists$$ multiple paths to a vertex, BFS always visits based on [closest path](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g128656a55e_0_70)
 * [Traversals & Graph Problems](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_670)
+    * Detect cycle by running DFS → $$\exists$$ cycle if node already on active call stack encountered, runtime $$\Theta(E + V)$$
 
 ### [Topological Sorting](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_1182)
 * Indegree 0 vertices → $$\Theta(E + V)$$, have to look at $$V$$ lists w/ total length $$E$$
 * Only works if graph is acyclic → $$\varnothing$$ if cyclic b/c can't have circular dependencies
     * No indegree 0 vertices → cyclic → $$\varnothing$$
 * Topological ordering only possible iff graph is directed acyclic graph (no directed cycles)
+* Reverse postorder
 * [Linearizes graph](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_401)
 * [Graph Problems](https://docs.google.com/presentation/d/1SeJA6Gup2Pti4jcn73khxIWR5iSmoe9tXnlMWq-aiDM/edit#slide=id.g99668982c_1_1236)
 
@@ -453,3 +540,8 @@ public class DepthFirstOrder {
 * Default `String` method `matches` matches entire `String`, but not substrings
 * `group(0)` = first match of entire pattern, entire match
     * `group(i)`, `i > 0` = parenthesized groupings
+
+## Java
+### Maps
+* `Map` returns `null` when calling `get` on key not in `Map`
+* `Map` can have keys w/ `null` values
