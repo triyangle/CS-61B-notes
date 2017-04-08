@@ -10,7 +10,7 @@
     * **Cyclic:** $$\exists \geq 1 \text{ path that leads to start w/out reusing any edges}$$
 * Any graph w/ cycle = cyclic
     * If not → acyclic
-* [Terminology](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit)
+* [Terminology](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_0_0)
 * [Graph Processing Problems](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew/edit#slide=id.g76e0dad85_0_8)
 
 ## Graph Representations

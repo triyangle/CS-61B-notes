@@ -40,4 +40,4 @@
     * Ignore branches if no possible way branch could contain wanted item
 
 ## Tree Iterators (Extra)
-* Use `Stack` based BFS traversal
+* Use `Stack` based DFS traversal
