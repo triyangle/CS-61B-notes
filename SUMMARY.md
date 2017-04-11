@@ -37,7 +37,7 @@
     * [Graph Traversals](lecture/week10/lec27.md)
     * [Regular Expressions](lecture/week10/lec28.md)
   * Week 11
-    * Shortest Paths
+    * [Shortest Paths](lecture/week11/lec29.md)
     * MSTs
     * Dynamic Programming
   * Week 12
@@ -54,6 +54,7 @@
 * Exams
   * [Midterm 1](review/mt1.md)
   * [Midterm 2](review/mt2.md)
+  * [Final](review/final.md)
 * Projects
   * [NBody](projects/NBody.md)
 * Reading
