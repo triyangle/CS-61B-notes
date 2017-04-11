@@ -27,9 +27,9 @@
     * [Proof sketch](https://docs.google.com/presentation/d/14MotRlepBzlhoqgYVmQcBRFpDO0kUs_zHqf3NB-BR88/edit#slide=id.g99cc41691_0_976)
     * [Implementation/Pseudocode](https://docs.google.com/presentation/d/14MotRlepBzlhoqgYVmQcBRFpDO0kUs_zHqf3NB-BR88/edit#slide=id.g99cc41691_0_753)
     * [Runtime](https://docs.google.com/presentation/d/14MotRlepBzlhoqgYVmQcBRFpDO0kUs_zHqf3NB-BR88/edit#slide=id.g99cc41691_0_963)
-        * Insert each vertex from priority queue → total $$V$$ times, each costing $$O(log{V})$$ time
-        * Delete each vertex from priority queue → total $$V$$ times, each costing $$O(log{V})$$ time
-        * In worst case, every single relaxation changes priority of vertex → $$E$$ `decreasePriority` operations, each costing $$O(log{V})$$ time
+        * Insert each vertex from priority queue → total $$V$$ times, each costing $$O(\log{V})$$ time
+        * Delete each vertex from priority queue → total $$V$$ times, each costing $$O(\log{V})$$ time
+        * In worst case, every single relaxation changes priority of vertex → $$E$$ `decreasePriority` operations, each costing $$O(\log{V})$$ time
         * Overall runtime: $$O(V \cdot \log{V} + V \cdot \log{V} + E \cdot \log{V}$$ → $$O((E + V) \cdot \log{V})$$
             * Assuming $$E > V$$ → $$O(E \cdot \log{V})$$
     * [Graph Problems](https://docs.google.com/presentation/d/14MotRlepBzlhoqgYVmQcBRFpDO0kUs_zHqf3NB-BR88/edit#slide=id.g99cc41691_0_957)
