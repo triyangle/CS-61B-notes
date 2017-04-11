@@ -43,7 +43,7 @@
   * Week 12
     * Basic Sorting Algorithms
     * Basic Sorts, Quick Sort
-    * More Quick Sort, Stability
+    * More Quick Sort, Stability, Shuffling
   * Week 13
     * Sorting & Algorithmic Bounds
     * Radix Sorts
@@ -51,6 +51,7 @@
   * Week 14
     * Compression
     * Reductions, Algorithmic Bounds, NP Completeness
+    * Summary, Fun
 * Exams
   * [Midterm 1](review/mt1.md)
   * [Midterm 2](review/mt2.md)
