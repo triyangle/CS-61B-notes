@@ -32,6 +32,9 @@
         * In worst case, every single relaxation changes priority of vertex → $$E$$ `decreasePriority` operations, each costing $$O(\log{V})$$ time
         * Overall runtime: $$O(V \cdot \log{V} + V \cdot \log{V} + E \cdot \log{V}$$ → $$O((E + V) \cdot \log{V})$$
             * Assuming $$E > V$$ → $$O(E \cdot \log{V})$$
+                * For every vertex $$V$$ in connected graph, need at least $$V - 1$$ total edges, $$V - 1$$ edges = minimum # of edges → spanning tree
+                * $$> V - 1$$ edges → $$\exists$$ cycle(s)
+                * $$E > V$$ usually, otherwise graph is just a spanning tree
     * [Graph Problems](https://docs.google.com/presentation/d/14MotRlepBzlhoqgYVmQcBRFpDO0kUs_zHqf3NB-BR88/edit#slide=id.g99cc41691_0_957)
 ### Single Target Dijkstra's
 * Gives correct answer, but inefficient b/c searches in all possible directions

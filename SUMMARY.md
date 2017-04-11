@@ -38,8 +38,8 @@
     * [Regular Expressions](lecture/week10/lec28.md)
   * Week 11
     * [Shortest Paths](lecture/week11/lec29.md)
-    * MSTs
-    * Dynamic Programming
+    * [MSTs](lecture/week11/lec30.md)
+    * [Midterm 2 Review]()
   * Week 12
     * Basic Sorting Algorithms
     * Basic Sorts, Quick Sort
