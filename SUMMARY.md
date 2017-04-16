@@ -39,14 +39,14 @@
   * Week 11
     * [Shortest Paths](lecture/week11/lec29.md)
     * [MSTs](lecture/week11/lec30.md)
-    * [Midterm 2 Review]()
+    * [Midterm 2 Review](https://docs.google.com/presentation/d/1dGZ_tDBAmL_zuQaMQ5Aa_lRHWASqn84wHCVkrSWASVI/edit#slide=id.g1dc273c0d8_0_0)
   * Week 12
-    * Basic Sorting Algorithms
-    * Basic Sorts, Quick Sort
-    * More Quick Sort, Stability, Shuffling
+    * [Basic Sorting Algorithms](lecture/week12/lec32.md)
+    * [Basic Sorts, Quick Sort](lecture/week12/lec33.md)
+    * [More Quick Sort, Stability, Shuffling](lecture/week12/lec34.md)
   * Week 13
-    * Sorting & Algorithmic Bounds
-    * Radix Sorts
+    * [Sorting & Algorithmic Bounds](lecture/week13/lec35.md)
+    * [Radix Sorts](lecture/week13/lec36.md)
     * Overview, Tries
   * Week 14
     * Compression
