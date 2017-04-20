@@ -47,7 +47,7 @@ $$
         * Moving up levels results in exponentially fewer nodes, and 1 height increase → somewhat balances out?
 * Top-down heapification runtime, $$\Theta(N \log{N})$$, level order swimming, analogous to inserting $$N$$ items into heap
     * **Intuition:** Start from top level of tree, where least nodes are and swimming up requires least amount of work
-        * Moving down levels results in exponentially more nodes, and 1 height increase → most work down at deepest level
+        * Moving down levels results in exponentially more nodes, and 1 height increase → most work done at deepest levels
 
 ### [Runtime/Complexity](https://docs.google.com/presentation/d/1_Bhr6YRbu6hrWmR65ydpYRdrvNylKoW9PqyvMvJs9Iw/edit#slide=id.g12a12f5ae1_0_233)
 * Best case runtime $$\Theta(N)$$, array of all duplicates → constant insertion/deletion into/from heap
