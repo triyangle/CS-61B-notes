@@ -47,7 +47,7 @@
   * Week 13
     * [Sorting & Algorithmic Bounds](lecture/week13/lec35.md)
     * [Radix Sorts](lecture/week13/lec36.md)
-    * Overview, Tries
+    * [Overview, Tries](lecture/week13/lec37.md)
   * Week 14
     * Compression
     * Reductions, Algorithmic Bounds, NP Completeness
