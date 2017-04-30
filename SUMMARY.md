@@ -49,9 +49,9 @@
     * [Radix Sorts](lecture/week13/lec36.md)
     * [Overview, Tries](lecture/week13/lec37.md)
   * Week 14
-    * Compression
-    * Reductions, Algorithmic Bounds, NP Completeness
-    * Summary, Fun
+    * [Compression](lecture/week14/lec38.md)
+    * [Reductions, Algorithmic Bounds, NP Completeness](lecture/week14/lec39.md)
+    * [Summary, Fun](lecture/week14/lec40.md)
 * Exams
   * [Midterm 1](review/mt1.md)
   * [Midterm 2](review/mt2.md)
