@@ -13,7 +13,7 @@
 
 ## [Quicksort](http://inst.eecs.berkeley.edu/~cs61b/fa14/demos/quicksort-demo.html)
 * Maximum partition size limits # of inversions in sequences → limits execution time of insertion sort
-* # of inversions in sequences partitioned by quicksort equal to sum of # of inversions in individual partitions
+* \# of inversions in sequences partitioned by quicksort equal to sum of # of inversions in individual partitions
 * Once max partition size reduced to constant → total # of inversions linear in size of entire sequence
 * Insertion sort has better constant factors than quicksort → common modification to quicksort = apply insertion sort once max partition size reduced below predetermined threshold
 * Each partitioning operation requires linear time in size of subsequence being partitioned
