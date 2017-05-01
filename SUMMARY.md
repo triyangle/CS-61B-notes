@@ -51,7 +51,7 @@
     * Week 14
         * [Compression](lecture/week14/lec38.md)
         * [Reductions, Algorithmic Bounds, NP Completeness](lecture/week14/lec39.md)
-        * [Summary, Fun](https://docs.google.com/presentation/d/1vEgZPl-XVXUE8GyLjNJj3v_NHWomSXMhYdQZKGtpO98/edit#slide=id.g9bba59367_0_0)
+        * [Summary, Fun](https://docs.google.com/presentation/d/1vEgZPl-XVXUE8GyLjNJj3v_NHWomSXMhYdQZKGtpO98/edit#slide=id.g9bb485871_0_162)
 * Exams
     * [Midterm 1](review/mt1.md)
     * [Midterm 2](review/mt2.md)
