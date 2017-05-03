@@ -61,15 +61,16 @@
 * Reading
     * [Hug61B](https://joshhug.gitbooks.io/hug61b/content/)
         * [2. Lists](https://joshhug.gitbooks.io/hug61b/content/chap2/)
-            * [2.1 Mystery of the Walrus](reading/Ch2/1.md)
-            * [2.2 The SLList](reading/Ch2/2/2.md)
-            * [2.4 Arrays](reading/Ch2/4.md)
-            * [2.5 The AList](reading/Ch2/5.md)
+            * [2.1 Mystery of the Walrus](reading/hug61b/ch2/1.md)
+            * [2.2 The SLList](reading/hug61b/ch2/2/2.md)
+            * [2.4 Arrays](reading/hug61b/ch2/4.md)
+            * [2.5 The AList](reading/hug61b/ch2/5.md)
     * JRS Notes
         * [Encapsulation](reading/jrs/encapsulation.md)
         * [Disjoint Sets](reading/jrs/disjoint_sets.md)
     * [Algorithms, 4th Edition](http://algs4.cs.princeton.edu/home/)
         * [1. Fundamentals](http://algs4.cs.princeton.edu/10fundamentals/)
-            * 1.4 Analysis of Algorithms
+            * [1.4 Analysis of Algorithms](reading/algs4/ch1/4.md)
+            * [1.5 Case Study: Union-Find](reading/algs4/ch1/5.md)
     * Extra
         * [Sorting](reading/extra/sorting.md)
