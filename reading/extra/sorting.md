@@ -20,7 +20,7 @@
 * In worst case, maximum partition size reduced by one on each step → $$O(N^{2})$$ runtime
 * Various strategies $$\exists$$ for choosing pivots, including taking small random samples of subsequence
 
-## [Straing Selection Sorting](http://inst.eecs.berkeley.edu/~cs61b/fa14/demos/selection-sort-demo.html)
+## [Straight Selection Sorting](http://inst.eecs.berkeley.edu/~cs61b/fa14/demos/selection-sort-demo.html)
 * Select successively smaller/larger items from list & add to output sequence
 * Looks at all unprocessed data on each pass → performs no better for nearly sorted inputs than random or reverse-sorted inputs (unlike insertion sort)
 * Possible optimization = remember order of other items on each pass through (turns into heapsort?)

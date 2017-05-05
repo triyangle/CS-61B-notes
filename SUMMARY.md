@@ -72,5 +72,10 @@
         * [1. Fundamentals](http://algs4.cs.princeton.edu/10fundamentals/)
             * [1.4 Analysis of Algorithms](reading/algs4/ch1/4.md)
             * [1.5 Case Study: Union-Find](reading/algs4/ch1/5.md)
+        * [3. Searching](http://algs4.cs.princeton.edu/30searching/)
+            * [3.2 Binary Search Trees](reading/algs4/ch3/2.md)
+            * [3.3 Balanced Search Trees](reading/algs4/ch3/3.md)
+        * [4. Graphs](http://algs4.cs.princeton.edu/40graphs/)
+            * [4.4 Shortest Paths](reading/algs4/ch4/4.md)
     * Extra
         * [Sorting](reading/extra/sorting.md)
