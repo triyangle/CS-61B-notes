@@ -93,7 +93,7 @@
 
 ## Asymptotics
 * If function has runtime $$R(N)$$ with order of growth $$\Theta(N^2)$$:
-    * $$R(N) \in \Theta(N^2) \forall \text{inputs}$$
+    * $$R(N) \in \Theta(N^2) \ \forall \text{ inputs}$$
     * Running function on input size of 1000 & input size of 10000 may not be large enough $$N$$ to exhibit quadratic behavior (i.e. takes 100 times longer to run)
         * $$\Theta$$ notation may abstract away potentially very large constant factors that may initially entirely determine the overall runtime for small inputs
 * Use arithmetic/geometric sum formulas
