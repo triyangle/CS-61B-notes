@@ -48,6 +48,9 @@ public interface MinPQ<Item> {
 
 * Position in tree/heap = priority
 * Heap is $$\log{N}$$ time amortized (resize backing array)
+    * Worst case inserting $$N$$ items:
+        * $$\log{1} + \log{2} + \ldots + \log{N} + 2 + 4 + 8 + 16 + \ldots + 2N = \log{N!} + 4N - 4 = N \log{N} + 4N - 4$$
+        * Averaged over $$N$$ items → $$\log{N} + 4 - \frac{4}{N}$$ → $$\Theta(\log{N})$$
 * BST can have constant `getSmallest` by keeping pointer to smallest
 * Heaps handle duplicate priorities much more naturally than BSTs
 * Array based heaps take less memory
@@ -67,4 +70,4 @@ public interface MinPQ<Item> {
 | Map            | `put(key, value)`                    | `get(key)`                  | key identity   |
 | Set            | `add(key)`                           | `containsKey(key)`          | key identity   |
 | PQ             | `add(key)`                           | `getSmallest()`             | key order/size |
-| Disjoint Sets  | `conenct(int1, int2)`                | `isConnected(int1, int2)`   | 2 int values   |
+| Disjoint Sets  | `connect(int1, int2)`                | `isConnected(int1, int2)`   | 2 int values   |

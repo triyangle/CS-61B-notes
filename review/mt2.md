@@ -20,7 +20,6 @@
 * Similar thing happens when moving from primitive type w/ narrower range to wider range
     * Value is promoted
     * `double` wider than `int` → can pass `int` as arg to method that declares `double` param
-        * `double` wider than `int`
 * To move from wider format to narrower format, must use casting
 
 
@@ -382,6 +381,9 @@ public interface MinPQ<Item> {
 
 * Position in tree/heap = priority
 * Heap is $$\log{N}$$ time amortized (resize backing array)
+    * Worst case inserting $$N$$ items:
+        * $$\log{1} + \log{2} + \ldots + \log{N} + 2 + 4 + 8 + 16 + \ldots + 2N = \log{N!} + 4N - 4 = N \log{N} + 4N - 4$$
+        * Averaged over $$N$$ items → $$\log{N} + 4 - \frac{4}{N}$$ → $$\Theta(\log{N})$$
 * BST can have constant `getSmallest` by keeping pointer to smallest
 * Heaps handle duplicate priorities much more naturally than BSTs
 * Array based heaps take less memory
