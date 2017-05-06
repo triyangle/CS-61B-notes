@@ -30,7 +30,7 @@
         * Insert each vertex from priority queue → total $$V$$ times, each costing $$O(\log{V})$$ time
         * Delete each vertex from priority queue → total $$V$$ times, each costing $$O(\log{V})$$ time
         * In worst case, every single relaxation changes priority of vertex → $$E$$ `decreasePriority` operations, each costing $$O(\log{V})$$ time
-        * Overall runtime: $$O(V \cdot \log{V} + V \cdot \log{V} + E \cdot \log{V}$$ → $$O((E + V) \cdot \log{V})$$
+        * Overall runtime: $$O(V \cdot \log{V} + V \cdot \log{V} + E \cdot \log{V})$$ → $$O((E + V) \cdot \log{V})$$
             * Assuming $$E > V$$ → $$O(E \cdot \log{V})$$
                 * For every vertex $$V$$ in connected graph, need at least $$V - 1$$ total edges, $$V - 1$$ edges = minimum # of edges → spanning tree
                 * $$> V - 1$$ edges → $$\exists$$ cycle(s)

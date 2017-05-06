@@ -79,4 +79,4 @@ public int find(int x) {
 * Sequence of $$f$$ `find` & $$u$$ `union` operations (in any order & possibly interleaved) takes $$\Theta(u + f \cdot \alpha(f + u, u))$$ time in worst case
     * $$\alpha$$ = extremely slowly-growing function, ***inverse Ackermann function***
         * Inverse Ackermann function never larger than 4 for any practical values of $$f$$ & $$u$$, but does grow arbitrarily large (for unimaginably gigantic values of $$f$$ & $$u$$)
-        * $$\forall$$ practical purposes, can think of quick-union as having `find` operations that run, on overage, in constant time
+        * $$\forall$$ practical purposes, can think of quick-union as having `find` operations that run, on average, in constant time
