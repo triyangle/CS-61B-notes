@@ -18,7 +18,7 @@
 ## [Trie Performance in Terms of $$N$$ & $$L$$](https://docs.google.com/presentation/d/1ZDobmVNNZIayrgDUZzZVM-t7yr6ZZCkWBhC6aEjtC04/edit#slide=id.g46b429e30_0557)
 * Runtime independent of $$N$$, # of keys
 * Best case runtime can correspond to failures instead of just successes (e.g. Trie `contains()`)
-* Hash table searching includes $$L$$ b/c always need to compute hash code, need to hash every digit
+* Hash table searching includes $$L$$ b/c always need to compute hash code (need to hash every digit) & for comparison
 * If need to search through each child to determine where to traverse down, $$R$$, alphabet size will be included in runtime → $$\Theta(RL)$$ worst case search/insert
 
 ## [Set/Map Data Structures (Raw Performance for Search)](https://docs.google.com/presentation/d/1ZDobmVNNZIayrgDUZzZVM-t7yr6ZZCkWBhC6aEjtC04/edit#slide=id.g76ca0850b_0_27)
@@ -34,8 +34,8 @@
 
 ## [Trie Implementation](https://docs.google.com/presentation/d/1ZDobmVNNZIayrgDUZzZVM-t7yr6ZZCkWBhC6aEjtC04/edit#slide=id.g76ca0850b_0_312)
 * $$R$$ = alphabet size
-* Use `char` `int` value to index into `Node[]`
-* Root always `exists` always `false`
+* Use `int` value of `char` to index into `Node[]`
+* Root `exists` always `false`
 * Extremely space hungry b/c not all characters for a given `Node` may be even used
 
 ## [Implementing T9 Texting](https://docs.google.com/presentation/d/1ZDobmVNNZIayrgDUZzZVM-t7yr6ZZCkWBhC6aEjtC04/edit#slide=id.g1dd51b040b_0_0)

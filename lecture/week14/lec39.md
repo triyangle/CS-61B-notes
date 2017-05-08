@@ -7,7 +7,7 @@
 * Some bitstreams = special, can be produced by all programming languages in compact amount of space
 
 ## [Kolmogorov Complexity (Uncomputability)](https://docs.google.com/presentation/d/1m-LOrlMJboW4jTc_Ggir26Q3R4L_KK7oJKlEgT3Uxy8/edit#slide=id.g12d7b1ac9b_1_183)
-* **Impossible** to write program that calculates/computes Kolmogorov Complexity of any bitstream → corollary → **impossible** to write "perfect" compression algorithm
+* **Impossible** to write program that calculates/computes Kolmogorov Complexity of any bitstream → corollary = **impossible** to write "perfect" compression algorithm
     * No way to do it in reverse, impossible b/c if possible to produce smallest program could just see how long it is (to obtain Kolmogorov Complexity) → violates uncomputability of Kolmogorov Complexity
 
 ## [Problem Difficulty](https://docs.google.com/presentation/d/1m-LOrlMJboW4jTc_Ggir26Q3R4L_KK7oJKlEgT3Uxy8/edit#slide=id.g12d7b1ac9b_1_205)
@@ -27,7 +27,7 @@
 * Solvable quickly
 * [Matters b/c fast](https://docs.google.com/presentation/d/1m-LOrlMJboW4jTc_Ggir26Q3R4L_KK7oJKlEgT3Uxy8/edit#slide=id.g12d7b1ac9b_1_480)
 
-### [THe Class NP](https://docs.google.com/presentation/d/1m-LOrlMJboW4jTc_Ggir26Q3R4L_KK7oJKlEgT3Uxy8/edit#slide=id.g12d7b1ac9b_1_474)
+### [The Class NP](https://docs.google.com/presentation/d/1m-LOrlMJboW4jTc_Ggir26Q3R4L_KK7oJKlEgT3Uxy8/edit#slide=id.g12d7b1ac9b_1_474)
 * NP problem = yes/no (true/false), & checkable/verifiable quickly
 
 #### [Why Does The Complexity Class NP Matter?](https://docs.google.com/presentation/d/1m-LOrlMJboW4jTc_Ggir26Q3R4L_KK7oJKlEgT3Uxy8/edit#slide=id.g12d7b1ac9b_1_486)

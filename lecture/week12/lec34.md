@@ -16,7 +16,7 @@
 ## [Quick Select](https://docs.google.com/presentation/d/1qajFKmGwMGnxVkg95NrxNOVbEEU4GEacJOQHdKj0Fjc/edit#slide=id.g984e2b919_0_30)
 * Similar to binary search but w/ partitioning, look at only relevant parts of array for median
     * Doing $$\log{N}$$ problems, where each problem = half size of previous problem → overall runtime = $$N$$
-        * $$\sum_{i = 0}^{\log{N}} \frac{N}{2^{i}} = 2N$$
+        * $$\sum_{i = 0}^{\log{N}} \frac{N}{2^{i}} = 2N - 1 = \Theta(N)$$
 
 ## [Sorting Stability](https://docs.google.com/presentation/d/1qajFKmGwMGnxVkg95NrxNOVbEEU4GEacJOQHdKj0Fjc/edit#slide=id.g465e07215_054)
 * Sort by secondary criteria first, then by primary criteria

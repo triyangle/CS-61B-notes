@@ -7,7 +7,7 @@
 * Decision tree not complete binary tree → round up to next integer tree height/depth
 
 ### [Generalized](https://docs.google.com/presentation/d/16rqFtnhrD0fpEPKRZ74CawjFoJ-TrIIs0jvP4loonG4/edit#slide=id.g12b7767647_0_382)
-* Tree needs to be at least height $$\lceil \log{(N!)} \rceil$$ to have $$N!$$ leaves
+* Tree needs at least $$\lceil \log{(N!)} \rceil$$ levels to have $$N!$$ leaves
 
 ### [Reducing](https://docs.google.com/presentation/d/16rqFtnhrD0fpEPKRZ74CawjFoJ-TrIIs0jvP4loonG4/edit#slide=id.g2fc129f8d_0_338)
 * Sorting = specific solution to general problem of puppy, cat, dog → any lower bound on difficulty of puppy, cat, dog must ALSO apply to sorting

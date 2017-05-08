@@ -34,7 +34,7 @@
 * Fringe contains all vertices in other set (other side of cut)
 * Difference between Dijkstra's = considers edge weight instead of total path weight
 
-### [Prim's Vs Dijkstra's](https://docs.google.com/presentation/d/1_6He8y70rmYI2ApbB8NisN4ws870i0zTFpbUpwMdctQ/edit#slide=id.g772f8a8e2_0_44)
+### [Prim's vs Dijkstra's](https://docs.google.com/presentation/d/1_6He8y70rmYI2ApbB8NisN4ws870i0zTFpbUpwMdctQ/edit#slide=id.g772f8a8e2_0_44)
 * Dijkstra's algorithm explores based on distance from source, SPT expands outwards
 * Prim's algorithm explores based on distance from MST under construction, jumps around
 

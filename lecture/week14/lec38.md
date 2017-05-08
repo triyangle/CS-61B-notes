@@ -1,6 +1,6 @@
 # Compression
 
-## [Compression Model #1: Algorithms Operation on Bits](https://docs.google.com/presentation/d/1IMXPc6fXVomjlTRqkFDYKygFlMjtQGMELkhybXcqaWE/edit#slide=id.g536bf0065_038)
+## [Compression Model #1: Algorithms Operating on Bits](https://docs.google.com/presentation/d/1IMXPc6fXVomjlTRqkFDYKygFlMjtQGMELkhybXcqaWE/edit#slide=id.g536bf0065_038)
 * ***Lossless*** algorithm → original bitstream recoverable perfectly from compressed bitstream
 
 ## [Increasing Optimality of Coding](https://docs.google.com/presentation/d/1IMXPc6fXVomjlTRqkFDYKygFlMjtQGMELkhybXcqaWE/edit#slide=id.g536bf0065_074)
